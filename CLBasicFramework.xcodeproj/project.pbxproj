@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */; };
 		0B5780C91955299300CF2DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780C81955299300CF2DCF /* Foundation.framework */; };
-		0B5780CB1955299300CF2DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780CA1955299300CF2DCF /* CoreGraphics.framework */; };
 		0B5780CD1955299300CF2DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780CC1955299300CF2DCF /* UIKit.framework */; };
 		0B5780D31955299300CF2DCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B5780D11955299300CF2DCF /* InfoPlist.strings */; };
 		0B5780D51955299300CF2DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780D41955299300CF2DCF /* main.m */; };
@@ -19,6 +19,17 @@
 		0B5780E41955299300CF2DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780CC1955299300CF2DCF /* UIKit.framework */; };
 		0B5780EC1955299300CF2DCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B5780EA1955299300CF2DCF /* InfoPlist.strings */; };
 		0B5780EE1955299300CF2DCF /* CLBasicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780ED1955299300CF2DCF /* CLBasicFrameworkTests.m */; };
+		0B5780FA19552A7200CF2DCF /* CLBasicFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780F919552A7200CF2DCF /* CLBasicFramework.m */; };
+		0B5780FD19552A9F00CF2DCF /* CLNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780FC19552A9F00CF2DCF /* CLNetwork.m */; };
+		0B57810019552BD800CF2DCF /* CLUIImageView+CLNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780FF19552BD800CF2DCF /* CLUIImageView+CLNetwork.m */; };
+		0B57810319552C0000CF2DCF /* CLHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810219552C0000CF2DCF /* CLHUD.m */; };
+		0B57810619552C2800CF2DCF /* CLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810519552C2800CF2DCF /* CLCache.m */; };
+		0B57810919552D0B00CF2DCF /* CLUIViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810819552D0B00CF2DCF /* CLUIViewUtils.m */; };
+		0B57810C19552D1E00CF2DCF /* CLNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810B19552D1E00CF2DCF /* CLNSStringUtils.m */; };
+		0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810E19552D6200CF2DCF /* CLExpandUtils.m */; };
+		0B57811719552D7E00CF2DCF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811319552D7E00CF2DCF /* Reachability.m */; };
+		0B57811819552D7E00CF2DCF /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811519552D7E00CF2DCF /* OpenUDID.m */; };
+		0B57815819557A4400CF2DCF /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57815719557A4400CF2DCF /* NetworkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B06B6B5195724A100AD3B12 /* ImageNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageNetworkViewController.h; sourceTree = "<group>"; };
+		0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageNetworkViewController.m; sourceTree = "<group>"; };
 		0B5780C51955299300CF2DCF /* CLBasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLBasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5780C81955299300CF2DCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0B5780CA1955299300CF2DCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0B5780CC1955299300CF2DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B5780D01955299300CF2DCF /* CLBasicFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLBasicFramework-Info.plist"; sourceTree = "<group>"; };
 		0B5780D21955299300CF2DCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -48,6 +60,28 @@
 		0B5780E91955299300CF2DCF /* CLBasicFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLBasicFrameworkTests-Info.plist"; sourceTree = "<group>"; };
 		0B5780EB1955299300CF2DCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B5780ED1955299300CF2DCF /* CLBasicFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBasicFrameworkTests.m; sourceTree = "<group>"; };
+		0B5780F819552A7200CF2DCF /* CLBasicFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLBasicFramework.h; sourceTree = "<group>"; };
+		0B5780F919552A7200CF2DCF /* CLBasicFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLBasicFramework.m; sourceTree = "<group>"; };
+		0B5780FB19552A9F00CF2DCF /* CLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetwork.h; sourceTree = "<group>"; };
+		0B5780FC19552A9F00CF2DCF /* CLNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNetwork.m; sourceTree = "<group>"; };
+		0B5780FE19552BD800CF2DCF /* CLUIImageView+CLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLUIImageView+CLNetwork.h"; sourceTree = "<group>"; };
+		0B5780FF19552BD800CF2DCF /* CLUIImageView+CLNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLUIImageView+CLNetwork.m"; sourceTree = "<group>"; };
+		0B57810119552C0000CF2DCF /* CLHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLHUD.h; sourceTree = "<group>"; };
+		0B57810219552C0000CF2DCF /* CLHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLHUD.m; sourceTree = "<group>"; };
+		0B57810419552C2800CF2DCF /* CLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCache.h; sourceTree = "<group>"; };
+		0B57810519552C2800CF2DCF /* CLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCache.m; sourceTree = "<group>"; };
+		0B57810719552D0B00CF2DCF /* CLUIViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUIViewUtils.h; sourceTree = "<group>"; };
+		0B57810819552D0B00CF2DCF /* CLUIViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUIViewUtils.m; sourceTree = "<group>"; };
+		0B57810A19552D1E00CF2DCF /* CLNSStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNSStringUtils.h; sourceTree = "<group>"; };
+		0B57810B19552D1E00CF2DCF /* CLNSStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNSStringUtils.m; sourceTree = "<group>"; };
+		0B57810D19552D6200CF2DCF /* CLExpandUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLExpandUtils.h; sourceTree = "<group>"; };
+		0B57810E19552D6200CF2DCF /* CLExpandUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLExpandUtils.m; sourceTree = "<group>"; };
+		0B57811219552D7E00CF2DCF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0B57811319552D7E00CF2DCF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0B57811419552D7E00CF2DCF /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		0B57811519552D7E00CF2DCF /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		0B57815619557A4400CF2DCF /* NetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
+		0B57815719557A4400CF2DCF /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B5780CB1955299300CF2DCF /* CoreGraphics.framework in Frameworks */,
 				0B5780CD1955299300CF2DCF /* UIKit.framework in Frameworks */,
 				0B5780C91955299300CF2DCF /* Foundation.framework in Frameworks */,
 			);
@@ -97,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				0B5780C81955299300CF2DCF /* Foundation.framework */,
-				0B5780CA1955299300CF2DCF /* CoreGraphics.framework */,
 				0B5780CC1955299300CF2DCF /* UIKit.framework */,
 				0B5780E11955299300CF2DCF /* XCTest.framework */,
 			);
@@ -109,6 +141,11 @@
 			children = (
 				0B5780D71955299300CF2DCF /* AppDelegate.h */,
 				0B5780D81955299300CF2DCF /* AppDelegate.m */,
+				0B57815619557A4400CF2DCF /* NetworkViewController.h */,
+				0B57815719557A4400CF2DCF /* NetworkViewController.m */,
+				0B06B6B5195724A100AD3B12 /* ImageNetworkViewController.h */,
+				0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */,
+				0B5780F7195529A200CF2DCF /* CLBasicFramework */,
 				0B5780DA1955299300CF2DCF /* Images.xcassets */,
 				0B5780CF1955299300CF2DCF /* Supporting Files */,
 			);
@@ -142,6 +179,33 @@
 				0B5780EA1955299300CF2DCF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B5780F7195529A200CF2DCF /* CLBasicFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0B5780F819552A7200CF2DCF /* CLBasicFramework.h */,
+				0B5780F919552A7200CF2DCF /* CLBasicFramework.m */,
+				0B5780FB19552A9F00CF2DCF /* CLNetwork.h */,
+				0B5780FC19552A9F00CF2DCF /* CLNetwork.m */,
+				0B5780FE19552BD800CF2DCF /* CLUIImageView+CLNetwork.h */,
+				0B5780FF19552BD800CF2DCF /* CLUIImageView+CLNetwork.m */,
+				0B57810119552C0000CF2DCF /* CLHUD.h */,
+				0B57810219552C0000CF2DCF /* CLHUD.m */,
+				0B57810419552C2800CF2DCF /* CLCache.h */,
+				0B57810519552C2800CF2DCF /* CLCache.m */,
+				0B57810719552D0B00CF2DCF /* CLUIViewUtils.h */,
+				0B57810819552D0B00CF2DCF /* CLUIViewUtils.m */,
+				0B57810A19552D1E00CF2DCF /* CLNSStringUtils.h */,
+				0B57810B19552D1E00CF2DCF /* CLNSStringUtils.m */,
+				0B57810D19552D6200CF2DCF /* CLExpandUtils.h */,
+				0B57810E19552D6200CF2DCF /* CLExpandUtils.m */,
+				0B57811219552D7E00CF2DCF /* Reachability.h */,
+				0B57811319552D7E00CF2DCF /* Reachability.m */,
+				0B57811419552D7E00CF2DCF /* OpenUDID.h */,
+				0B57811519552D7E00CF2DCF /* OpenUDID.m */,
+			);
+			name = CLBasicFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +303,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B57810619552C2800CF2DCF /* CLCache.m in Sources */,
+				0B57810319552C0000CF2DCF /* CLHUD.m in Sources */,
+				0B5780FA19552A7200CF2DCF /* CLBasicFramework.m in Sources */,
+				0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */,
+				0B57810919552D0B00CF2DCF /* CLUIViewUtils.m in Sources */,
+				0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */,
 				0B5780D91955299300CF2DCF /* AppDelegate.m in Sources */,
+				0B57811819552D7E00CF2DCF /* OpenUDID.m in Sources */,
 				0B5780D51955299300CF2DCF /* main.m in Sources */,
+				0B57810C19552D1E00CF2DCF /* CLNSStringUtils.m in Sources */,
+				0B57815819557A4400CF2DCF /* NetworkViewController.m in Sources */,
+				0B57810019552BD800CF2DCF /* CLUIImageView+CLNetwork.m in Sources */,
+				0B5780FD19552A9F00CF2DCF /* CLNetwork.m in Sources */,
+				0B57811719552D7E00CF2DCF /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +435,14 @@
 		0B5780F21955299300CF2DCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLBasicFramework/CLBasicFramework-Prefix.pch";
 				INFOPLIST_FILE = "CLBasicFramework/CLBasicFramework-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -372,11 +451,14 @@
 		0B5780F31955299300CF2DCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLBasicFramework/CLBasicFramework-Prefix.pch";
 				INFOPLIST_FILE = "CLBasicFramework/CLBasicFramework-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +525,7 @@
 				0B5780F31955299300CF2DCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B5780F41955299300CF2DCF /* Build configuration list for PBXNativeTarget "CLBasicFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +534,7 @@
 				0B5780F61955299300CF2DCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

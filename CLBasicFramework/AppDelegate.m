@@ -7,13 +7,36 @@
 //
 
 #import "AppDelegate.h"
+#import "NetworkViewController.h"
+#import "ImageNetworkViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    NetworkViewController *network = [[NetworkViewController alloc] init];
+    network.title = @"Network";
+    UINavigationController *netNav = [[UINavigationController alloc] initWithRootViewController:network];
+    
+    
+    ImageNetworkViewController *image = [[ImageNetworkViewController alloc] init];
+    image.title = @"ImageNet";
+    UINavigationController *imgNav = [[UINavigationController alloc] initWithRootViewController:image];
+    
+    UITabBarController *tabbar = [[UITabBarController alloc] init];
+    tabbar.viewControllers = @[netNav, imgNav];
+    self.window.rootViewController = tabbar;
+    
+    [network release];
+    [netNav  release];
+    
+    [image release];
+    [imgNav release];
+    
+    [tabbar  release];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
