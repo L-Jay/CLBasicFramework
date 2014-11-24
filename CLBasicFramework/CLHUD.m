@@ -275,6 +275,11 @@ static CLHUDAnimation _animation = 0;
     }
 }
 
++ (CLHUD *)hudForView:(UIView *)view
+{
+    return [CLHUD swtichHUDForView:view];
+}
+
 #pragma mark - Create Control
 - (CGPoint)viewCenter
 {
@@ -440,7 +445,7 @@ static CLHUDAnimation _animation = 0;
         hud.window.hidden = NO;
     }
     
-    hud.mainSuperView = view ? view : hud.window;
+    //hud.mainSuperView = view ? view : hud.window;
     [hud.mainSuperView addSubview:hud.mainView];
     
     [hud.mainView removeAllSubviews];
@@ -594,7 +599,7 @@ static CLHUDAnimation _animation = 0;
     [self.mainView removeAllSubviews];
     
     if (!self.isShow) {
-        [self.window addSubview:self.mainView];
+        [self.mainSuperView addSubview:self.mainView];
     }
     
     BOOL haveText = NO;

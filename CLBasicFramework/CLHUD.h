@@ -94,6 +94,8 @@ typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
  */
 + (void)registerAnimation:(CLHUDAnimation)animation;
 
+#pragma mark - Create Methods
++ (CLHUD *)hudForView:(UIView *)view;
 
 #pragma mark - ActivityView Methods
 ///---------------------------------------------------------------------------------------

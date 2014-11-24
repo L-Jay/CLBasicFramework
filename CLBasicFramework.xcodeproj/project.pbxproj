@@ -29,6 +29,8 @@
 		0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810E19552D6200CF2DCF /* CLExpandUtils.m */; };
 		0B57811719552D7E00CF2DCF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811319552D7E00CF2DCF /* Reachability.m */; };
 		0B57815819557A4400CF2DCF /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57815719557A4400CF2DCF /* NetworkViewController.m */; };
+		8CEC41D51A230B8B0049CA50 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC41D41A230B8B0049CA50 /* HUDViewController.m */; };
+		8CEC41D71A2316710049CA50 /* CLBasicFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC41D61A2316710049CA50 /* CLBasicFramework.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		0B57811319552D7E00CF2DCF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0B57815619557A4400CF2DCF /* NetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
 		0B57815719557A4400CF2DCF /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
+		8CEC41D31A230B8B0049CA50 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		8CEC41D41A230B8B0049CA50 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		8CEC41D61A2316710049CA50 /* CLBasicFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLBasicFramework.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		0B5780BC1955299300CF2DCF = {
 			isa = PBXGroup;
 			children = (
+				8CEC41D61A2316710049CA50 /* CLBasicFramework.bundle */,
 				0B5780CE1955299300CF2DCF /* CLBasicFramework */,
 				0B5780E71955299300CF2DCF /* CLBasicFrameworkTests */,
 				0B5780C71955299300CF2DCF /* Frameworks */,
@@ -142,6 +148,8 @@
 				0B57815719557A4400CF2DCF /* NetworkViewController.m */,
 				0B06B6B5195724A100AD3B12 /* ImageNetworkViewController.h */,
 				0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */,
+				8CEC41D31A230B8B0049CA50 /* HUDViewController.h */,
+				8CEC41D41A230B8B0049CA50 /* HUDViewController.m */,
 				0B5780F7195529A200CF2DCF /* CLBasicFramework */,
 				0B5780DA1955299300CF2DCF /* Images.xcassets */,
 				0B5780CF1955299300CF2DCF /* Supporting Files */,
@@ -278,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEC41D71A2316710049CA50 /* CLBasicFramework.bundle in Resources */,
 				0B5780D31955299300CF2DCF /* InfoPlist.strings in Resources */,
 				0B5780DB1955299300CF2DCF /* Images.xcassets in Resources */,
 			);
@@ -302,6 +311,7 @@
 				0B57810319552C0000CF2DCF /* CLHUD.m in Sources */,
 				0B5780FA19552A7200CF2DCF /* CLBasicFramework.m in Sources */,
 				0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */,
+				8CEC41D51A230B8B0049CA50 /* HUDViewController.m in Sources */,
 				0B57810919552D0B00CF2DCF /* CLUIViewUtils.m in Sources */,
 				0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */,
 				0B5780D91955299300CF2DCF /* AppDelegate.m in Sources */,

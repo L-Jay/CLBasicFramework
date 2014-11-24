@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NetworkViewController.h"
 #import "ImageNetworkViewController.h"
+#import "HUDViewController.h"
 
 @implementation AppDelegate
 
@@ -25,8 +26,12 @@
     image.title = @"ImageNet";
     UINavigationController *imgNav = [[UINavigationController alloc] initWithRootViewController:image];
     
+    HUDViewController *hud = [[HUDViewController alloc] init];
+    hud.title = @"HUD";
+    UINavigationController *hudNav = [[UINavigationController alloc] initWithRootViewController:hud];
+    
     UITabBarController *tabbar = [[UITabBarController alloc] init];
-    tabbar.viewControllers = @[netNav, imgNav];
+    tabbar.viewControllers = @[netNav, imgNav, hudNav];
     self.window.rootViewController = tabbar;
     
     [network release];
