@@ -106,13 +106,31 @@ typedef NS_ENUM(NSInteger, CLViewAnimation) {
  */
 @property (nonatomic) CGPoint centerBounds;
 
+/**
+ *	@brief	View的MinX移动到点.
+ */
+@property (nonatomic) CGFloat moveMinX;
+
+/**
+ *	@brief	View的MinY移动到点.
+ */
+@property (nonatomic) CGFloat moveMinY;
+
+/**
+ *	@brief	View的MaxX移动到点.
+ */
+@property (nonatomic) CGFloat moveMaxX;
+
+/**
+ *	@brief	View的MaxY移动到点.
+ */
+@property (nonatomic) CGFloat moveMaxY;
 
 #pragma mark - Property Extend
 /**
  *	@brief	View所属的ViewController.
  */
 @property (nonatomic, assign, readonly) UIViewController *controller;
-
 
 #pragma mark - Instance Methods
 ///---------------------------------------------------------------------------------------

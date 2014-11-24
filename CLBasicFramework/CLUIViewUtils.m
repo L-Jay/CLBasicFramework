@@ -117,6 +117,46 @@
     
 }
 
+- (CGFloat)moveMinX
+{
+    return 0;
+}
+
+- (void)setMoveMinX:(CGFloat)moveMinX
+{
+    self.centerX += moveMinX-self.minX;
+}
+
+- (CGFloat)moveMinY
+{
+    return 0;
+}
+
+- (void)setMoveMinY:(CGFloat)moveMinY
+{
+    self.centerY += moveMinY-self.minY;
+}
+
+- (CGFloat)moveMaxX
+{
+    return 0;
+}
+
+- (void)setMoveMaxX:(CGFloat)moveMaxX
+{
+    self.centerX += moveMaxX-self.maxX;
+}
+
+- (CGFloat)moveMaxY
+{
+    return 0;
+}
+
+- (void)setMoveMaxY:(CGFloat)moveMaxY
+{
+    self.centerY += moveMaxY-self.maxY;
+}
+
 #pragma mark - Property Extend
 - (void)setController:(UIViewController *)controller
 {
