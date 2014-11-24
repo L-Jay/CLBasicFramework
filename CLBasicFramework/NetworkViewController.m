@@ -33,6 +33,17 @@
 //        
 //    }];
     
+//    [CLNetwork getRequestWithUrl:@"http://cmhtech.ecartoon.net/book_content.php?bookid=55&id=372&imagesize=320480" withTag:@"justtest" requestResultWithTag:^(id object, NSError *error, NSString *tag) {
+//        if (error) {
+//            NSLog(@"object: %@", object);
+//            NSLog(@"error %@", error);
+//        }else
+//            NSLog(@"object: %@", object);
+//        
+//        NSLog(@"tag  =-=-= %@", tag);
+//        
+//    }];
+    
 //    /*http://soccer.frontnetwork.com/Guess/history*/
 //    [CLNetwork registerNetWorkWithBasicUrl:@"http://soccer.frontnetwork.com/" constValue:nil];
 //    [CLNetwork postRequestWithTypeUrl:@"Guess/history" keyAndValues:nil withTag:nil requestResult:^(id object, NSError *error){
@@ -42,6 +53,15 @@
 //        }else
 //            NSLog(@"object: %@", object);
 //        
+//    }];
+    
+//    [CLNetwork postRequestWithTypeUrl:@"Guess/history" keyAndValues:nil withTag:@"test" requestResultWithTag:^(id object, NSError *error, NSString *tag) {
+//        if (error) {
+//            NSLog(@"error %@", error);
+//        }else
+//            NSLog(@"object: %@", object);
+//        
+//        NSLog(@"tag: === %@", tag);
 //    }];
 }
 

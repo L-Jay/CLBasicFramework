@@ -83,12 +83,13 @@
  *	@param 	typeUrl 	功能URL,与basicUrl拼接为完整的URL,可为空.
  *	@param 	values 	传入参数,NSDictionary型.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id Object, NSError *error))result;
++ (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
++ (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id object, NSError *error, NSString *tag))result;
 
 
 ///---------------------------------------------------------------------------------------
@@ -104,12 +105,13 @@
  *	@param 	useValue 	是否使用固定请求参数.
  *	@param 	values 	传入参数.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id Object, NSError *error))result;
++ (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
++ (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id object, NSError *error, NSString *tag))result;
 
 
 /**
@@ -117,12 +119,13 @@
  *
  *	@param 	url 	是否需要用basicURL.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
 + (void)getRequestWithUrl:(NSString *)url withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result;
++ (void)getRequestWithUrl:(NSString *)url withTag:(NSString *)tag requestResultWithTag:(void (^)(id object, NSError *error, NSString *tag))result;
 
 
 /**
@@ -131,7 +134,7 @@
  *	@param 	useUrl 	是否需要用basicURL.
  *	@param 	values 	传入参数.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
@@ -144,7 +147,7 @@
  *
  *	@param 	typeUrl 	功能URL,与basicUrl拼接为完整的URL,可为空.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
@@ -158,7 +161,7 @@
  *	@param 	typeUrl 	功能URL,与basicUrl拼接为完整的URL,可为空.
  *	@param 	values 	传入参数.
  *	@param 	tag 	请求tag值.
- *	@param 	Object   返回数据,NSArray型或NSDictionary型.
+ *	@param 	object   返回数据,NSArray型或NSDictionary型.
  *	@param 	error    返回错误.
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
