@@ -22,6 +22,9 @@
     self.view.backgroundColor = [UIColor orangeColor];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"SHOW" style:UIBarButtonItemStyleBordered target:self action:@selector(showHUD)];
+    
+    NSLog(@"view: %@", NSStringFromCGRect(self.view.frame));
+    NSLog(@"screen: %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
 }
 
 - (void)showHUD
@@ -32,7 +35,9 @@
 //    [hud showSucceedWithText:@"ceshi"];
     
     //[CLHUD showActivityView];
-    [CLHUD showActivityViewInView:self.view];
+    //[CLHUD showActivityViewInView:self.view withText:@"正在加载"];
+    //[CLHUD registerAnimation:CLHUDAnimationSacleBig];
+    [CLHUD showActivityViewWithBackViewInView:self.view withText:@"正在加载"];
     //[CLHUD showSucceedWithText:@"试试"];
     
     [CLHUD hideComplete:^{

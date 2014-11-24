@@ -18,7 +18,7 @@
 
 #define InnerMargins 10
 #define OuterMargins 40
-#define MainViewMinWith 100
+#define MainViewMinWith 80
 #define MainViewMaxWith 320-OuterMargins*2
 #define MainViewMaxHeight 394
 
@@ -898,7 +898,7 @@ static CLHUDAnimation _animation = 0;
 - (void)hideAnimationScaleSmall
 {
     [UIView animateWithDuration:0.2 animations:^{
-        self.mainView.transform = CGAffineTransformMakeScale(0, 0);
+        self.mainView.transform = CGAffineTransformMakeScale(0.1, 0.1);
         self.mainView.alpha = 0;
         self.alpha = 0;
     }completion:^(BOOL finish){
