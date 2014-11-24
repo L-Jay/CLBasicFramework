@@ -30,6 +30,8 @@
 #define HUD_IMAGE_SUCCESS		@"CLBasicFramework.bundle/success-white.png"
 #define HUD_IMAGE_ERROR			@"CLBasicFramework.bundle/error-white.png"
 
+typedef void(^HideComplete)(void);
+
 static NSString *_succeedImageName = nil;
 static NSString *_failImageName = nil;
 
@@ -65,6 +67,8 @@ static CLHUDAnimation _animation = 0;
 
 @property (nonatomic) UIInterfaceOrientation oldOrientation;
 
+@property (nonatomic, copy) HideComplete complete;
+
 @end
 
 @implementation CLHUD
@@ -81,6 +85,8 @@ static CLHUDAnimation _animation = 0;
     
     CLRELEASE(_oldText);
     CLRELEASE(_oldImageName);
+    
+    Block_release(_complete);
     
     [super dealloc];
 }
@@ -579,6 +585,11 @@ static CLHUDAnimation _animation = 0;
 
 - (void)showText:(NSString *)text withImage:(NSString *)imageName imagePosition:(CLHUDImagePosition)position duration:(NSInteger)duration
 {
+    if (!self.mainSuperView) {
+        NSLog(@"请使用hudForView:方法初始化hud");
+        return;
+    }
+    
     if (([self.oldText isEqualToString:text] || self.oldText == text) &&
         ([self.oldImageName isEqualToString:imageName] || self.oldImageName == imageName)) {
         return;
@@ -788,9 +799,9 @@ static CLHUDAnimation _animation = 0;
     }
 }
 
-+ (void)hide
++ (void)hideAnimation:(BOOL)animation
 {
-    [[CLHUD shareHUD] hideAnimation:YES];
+    [[CLHUD shareHUD] hideAnimation:animation];
 }
 
 #pragma mark - Show Animations
@@ -942,6 +953,8 @@ static CLHUDAnimation _animation = 0;
 
 - (void)finishHide
 {
+    self.complete();
+    
     if (self.onWindow) {
         [[[UIApplication sharedApplication].delegate window] makeKeyAndVisible];
         self.window.hidden = YES;
@@ -975,6 +988,16 @@ static CLHUDAnimation _animation = 0;
 + (BOOL)isShow
 {
     return [CLHUD shareHUD].isShow;
+}
+
++ (void)hideComplete:(void (^)(void))complete
+{
+    [CLHUD shareHUD].complete = complete;
+}
+
+- (void)hideComplete:(void (^)(void))complete
+{
+    self.complete = complete;
 }
 
 #pragma mark - KVO

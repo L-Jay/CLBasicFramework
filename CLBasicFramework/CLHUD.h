@@ -95,7 +95,15 @@ typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
 + (void)registerAnimation:(CLHUDAnimation)animation;
 
 #pragma mark - Create Methods
+/**
+ *	@brief	初始化HUD.
+ *
+ *	@param 	view 	在view上显示hud.
+ *
+ *	@return	返回一个hud实例.
+ */
 + (CLHUD *)hudForView:(UIView *)view;
+
 
 #pragma mark - ActivityView Methods
 ///---------------------------------------------------------------------------------------
@@ -354,7 +362,7 @@ typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
 /**
  *	@brief	隐藏Window上弹出框.
  */
-+ (void)hide;
++ (void)hideAnimation:(BOOL)animation;
 
 /**
  *	@brief	隐藏View上弹出框.
@@ -365,6 +373,15 @@ typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
  */
 - (void)hideAnimation:(BOOL)animation;
 
+/**
+ *	@brief	hud隐藏回调.
+ */
++ (void)hideComplete:(void(^)(void))complete;
+
+/**
+ *	@brief	hud隐藏回调.
+ */
+- (void)hideComplete:(void(^)(void))complete;
 
 @end
 

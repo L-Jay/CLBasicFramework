@@ -26,18 +26,29 @@
 
 - (void)showHUD
 {
-    [[CLHUD hudForView:self.view] showSucceedWithText:@"试试"];
+    //[[CLHUD hudForView:self.view] showSucceedWithText:@"试试"];
     //[CLHUD showFailed];
+//    CLHUD *hud = [[CLHUD alloc] init];
+//    [hud showSucceedWithText:@"ceshi"];
     
     //[CLHUD showActivityView];
-    //[CLHUD showActivityViewInView:self.view];
+    [CLHUD showActivityViewInView:self.view];
     //[CLHUD showSucceedWithText:@"试试"];
+    
+    [CLHUD hideComplete:^{
+        NSLog(@"==== window hud 隐藏");
+    }];
+    
+    [self.view.hud hideComplete:^{
+        NSLog(@"==== view hud 隐藏");
+    }];
     
     [self performSelector:@selector(showOther) withObject:nil afterDelay:1];
 }
 
 - (void)showOther
 {
+    //[CLHUD hideAnimation:YES];
     //[CLHUD showSucceedWithText:@"试试"];
     //[self.view.hud hideAnimation:YES];
     [self.view.hud showSucceedWithText:@"试试"];
