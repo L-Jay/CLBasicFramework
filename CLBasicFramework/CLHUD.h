@@ -376,12 +376,12 @@ typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
 /**
  *	@brief	hud隐藏回调.
  */
-+ (void)hideComplete:(void(^)(void))complete;
++ (void)hideComplete:(void (^)(void))complete;
 
 /**
  *	@brief	hud隐藏回调.
  */
-- (void)hideComplete:(void(^)(void))complete;
+- (void)hideComplete:(void (^)(void))complete;
 
 @end
 

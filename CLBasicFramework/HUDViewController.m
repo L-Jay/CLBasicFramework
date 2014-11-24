@@ -41,6 +41,8 @@
     
     [self.view.hud hideComplete:^{
         NSLog(@"==== view hud 隐藏");
+        
+        [self performSelector:@selector(lookhud) withObject:nil afterDelay:1.0];
     }];
     
     [self performSelector:@selector(showOther) withObject:nil afterDelay:1];
@@ -52,6 +54,11 @@
     //[CLHUD showSucceedWithText:@"试试"];
     //[self.view.hud hideAnimation:YES];
     [self.view.hud showSucceedWithText:@"试试"];
+}
+
+- (void)lookhud
+{
+    NSLog(@"=-- %@", self.view.hud);
 }
 
 - (void)didReceiveMemoryWarning {
