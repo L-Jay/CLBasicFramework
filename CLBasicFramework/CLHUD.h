@@ -9,28 +9,28 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, CLHUDStyle) {
-    HUDStyleBlack                                = 0,
+    CLHUDStyleBlack                                = 0,
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
-    HUDStyleIOS7      NS_ENUM_AVAILABLE_IOS(7_0) = 1,
+    CLHUDStyleIOS7      NS_ENUM_AVAILABLE_IOS(7_0) = 1,
 #endif
 };
 
 typedef NS_ENUM(NSInteger, CLHUDAnimation) {
-    HUDAnimationSacleSmall = 0,     //从大到小
-    HUDAnimationSacleSmallShake,    //从大到小并抖动
-    HUDAnimationSacleBig,           //从小到大
-    HUDAnimationSacleBigShake,      //从小到大并抖动
-    HUDAnimationFromLeftToRight,    //从左出现往右消失
-    HUDAnimationFromLeftBackLeft,   //从左出现往左消失
-    HUDAnimationFromTopToBottom,    //从上出现往下消失
-    HUDAnimationFromTopBackTop,     //从上出现往上消失
+    CLHUDAnimationSacleSmall = 0,     //从大到小
+    CLHUDAnimationSacleSmallShake,    //从大到小并抖动
+    CLHUDAnimationSacleBig,           //从小到大
+    CLHUDAnimationSacleBigShake,      //从小到大并抖动
+    CLHUDAnimationFromLeftToRight,    //从左出现往右消失
+    CLHUDAnimationFromLeftBackLeft,   //从左出现往左消失
+    CLHUDAnimationFromTopToBottom,    //从上出现往下消失
+    CLHUDAnimationFromTopBackTop,     //从上出现往上消失
 };
 
 typedef NS_ENUM(NSInteger, CLHUDImagePosition) {
-    HUDImagePositionTop = 0,  //图片在顶部
-    HUDImagePositionBottom,   //图片在底部
-    HUDImagePositionLeft,     //图片在左边
-    HUDImagePositionRight,    //图片在右边
+    CLHUDImagePositionTop = 0,  //图片在顶部
+    CLHUDImagePositionBottom,   //图片在底部
+    CLHUDImagePositionLeft,     //图片在左边
+    CLHUDImagePositionRight,    //图片在右边
 };
 
 @interface CLHUD : UIView

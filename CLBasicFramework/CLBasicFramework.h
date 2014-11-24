@@ -15,7 +15,6 @@
 #import "CLNSStringUtils.h"
 #import "CLExpandUtils.h"
 #import "Reachability.h"
-#import "OpenUDID.h"
 
 /** 设备版本 CGFloat型. */
 #define DEVICE_VERSION DeviceSystemVersion()

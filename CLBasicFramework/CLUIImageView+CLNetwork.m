@@ -56,12 +56,12 @@ static char const * const animationChar = "animation";
 }
 
 //====================
-- (void)setAnimation:(ViewAnimation)animation
+- (void)setAnimation:(CLViewAnimation)animation
 {
     objc_setAssociatedObject(self, animationChar, [NSNumber numberWithInteger:animation], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (ViewAnimation)animation
+- (CLViewAnimation)animation
 {
     NSNumber *number = objc_getAssociatedObject(self, animationChar);
     

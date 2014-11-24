@@ -28,7 +28,6 @@
 		0B57810C19552D1E00CF2DCF /* CLNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810B19552D1E00CF2DCF /* CLNSStringUtils.m */; };
 		0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810E19552D6200CF2DCF /* CLExpandUtils.m */; };
 		0B57811719552D7E00CF2DCF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811319552D7E00CF2DCF /* Reachability.m */; };
-		0B57811819552D7E00CF2DCF /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811519552D7E00CF2DCF /* OpenUDID.m */; };
 		0B57815819557A4400CF2DCF /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57815719557A4400CF2DCF /* NetworkViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +77,6 @@
 		0B57810E19552D6200CF2DCF /* CLExpandUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLExpandUtils.m; sourceTree = "<group>"; };
 		0B57811219552D7E00CF2DCF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0B57811319552D7E00CF2DCF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		0B57811419552D7E00CF2DCF /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		0B57811519552D7E00CF2DCF /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		0B57815619557A4400CF2DCF /* NetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
 		0B57815719557A4400CF2DCF /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,8 +199,6 @@
 				0B57810E19552D6200CF2DCF /* CLExpandUtils.m */,
 				0B57811219552D7E00CF2DCF /* Reachability.h */,
 				0B57811319552D7E00CF2DCF /* Reachability.m */,
-				0B57811419552D7E00CF2DCF /* OpenUDID.h */,
-				0B57811519552D7E00CF2DCF /* OpenUDID.m */,
 			);
 			name = CLBasicFramework;
 			sourceTree = "<group>";
@@ -252,7 +247,7 @@
 		0B5780BD1955299300CF2DCF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = L;
 				TargetAttributes = {
 					0B5780DF1955299300CF2DCF = {
@@ -310,7 +305,6 @@
 				0B57810919552D0B00CF2DCF /* CLUIViewUtils.m in Sources */,
 				0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */,
 				0B5780D91955299300CF2DCF /* AppDelegate.m in Sources */,
-				0B57811819552D7E00CF2DCF /* OpenUDID.m in Sources */,
 				0B5780D51955299300CF2DCF /* main.m in Sources */,
 				0B57810C19552D1E00CF2DCF /* CLNSStringUtils.m in Sources */,
 				0B57815819557A4400CF2DCF /* NetworkViewController.m in Sources */,
@@ -362,7 +356,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -402,7 +395,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -435,15 +427,15 @@
 		0B5780F21955299300CF2DCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLBasicFramework/CLBasicFramework-Prefix.pch";
 				INFOPLIST_FILE = "CLBasicFramework/CLBasicFramework-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -451,15 +443,15 @@
 		0B5780F31955299300CF2DCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLBasicFramework/CLBasicFramework-Prefix.pch";
 				INFOPLIST_FILE = "CLBasicFramework/CLBasicFramework-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -467,7 +459,6 @@
 		0B5780F51955299300CF2DCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLBasicFramework.app/CLBasicFramework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -490,7 +481,6 @@
 		0B5780F61955299300CF2DCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLBasicFramework.app/CLBasicFramework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -33,7 +33,7 @@
 #pragma mark - Validate String
 - (BOOL)validateiPhoneNum
 {
-    return [self validateMatchesString: @"^1[3|4|5|8|9][0-9]{9}$"];
+    return [self validateMatchesString: @"^1[3|4|5|7|8|9][0-9]{9}$"];
 }
 
 - (BOOL)validateEmail

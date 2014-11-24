@@ -35,7 +35,7 @@
 /**
  *	@brief	图片下载完成后执行动画,详见CLUIViewUtils.h头文件.
  */
-@property (nonatomic) ViewAnimation animation;
+@property (nonatomic) CLViewAnimation animation;
 
 
 ///---------------------------------------------------------------------------------------

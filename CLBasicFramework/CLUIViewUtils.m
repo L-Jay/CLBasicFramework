@@ -9,8 +9,6 @@
 #import "CLUIViewUtils.h"
 #import <objc/runtime.h>
 
-static char const * const controllerChar = "controller";
-
 @implementation UIView(Util)
 
 #pragma mark - Coordinate
@@ -185,7 +183,7 @@ static char const * const controllerChar = "controller";
 }
 
 #pragma mark - Animations
-- (void)startAnimation:(ViewAnimation)animation
+- (void)startAnimation:(CLViewAnimation)animation
 {
     CATransition *transtion = [CATransition animation];
     transtion.delegate = self;
@@ -196,125 +194,125 @@ static char const * const controllerChar = "controller";
     NSString *animationSubType = nil;
     
     switch (animation) {
-        case AnimationFade:
+        case CLViewAnimationFade:
             animationType = kCATransitionFade;
             break;
-        case AnimationRipple:
+        case CLViewAnimationRipple:
             animationType = @"rippleEffect";
             duration = 0.5;
             break;
-        case AnimationSuckEffect:
+        case CLViewAnimationSuckEffect:
             animationType = @"suckEffect";
             break;
-        case AnimationFlipFromLeft:
+        case CLViewAnimationFlipFromLeft:
             animationType = @"oglFlip";
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationFlipFromRight:
+        case CLViewAnimationFlipFromRight:
             animationType = @"oglFlip";
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationFlipFromBottm:
+        case CLViewAnimationFlipFromBottm:
             animationType = @"oglFlip";
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationFlipFromTop:
+        case CLViewAnimationFlipFromTop:
             animationType = @"oglFlip";
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationPageCurlFromLeft:
+        case CLViewAnimationPageCurlFromLeft:
             animationType = @"pageCurl";
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationPageCurlFromRight:
+        case CLViewAnimationPageCurlFromRight:
             animationType = @"pageCurl";
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationPageCurlFromBottom:
+        case CLViewAnimationPageCurlFromBottom:
             animationType = @"pageCurl";
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationPageCurlFromTop:
+        case CLViewAnimationPageCurlFromTop:
             animationType = @"pageCurl";
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationPageUnCurlFromLeft:
+        case CLViewAnimationPageUnCurlFromLeft:
             animationType = @"pageUnCurl";
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationPageUnCurlFromRight:
+        case CLViewAnimationPageUnCurlFromRight:
             animationType = @"pageUnCurl";
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationPageUnCurlFromBottom:
+        case CLViewAnimationPageUnCurlFromBottom:
             animationType = @"pageUnCurl";
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationPageUnCurlFromTop:
+        case CLViewAnimationPageUnCurlFromTop:
             animationType = @"pageUnCurl";
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationMoveInFromLeft:
+        case CLViewAnimationMoveInFromLeft:
             animationType = kCATransitionMoveIn;
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationMoveInFromRight:
+        case CLViewAnimationMoveInFromRight:
             animationType = kCATransitionMoveIn;
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationMoveInFromBottom:
+        case CLViewAnimationMoveInFromBottom:
             animationType = kCATransitionMoveIn;
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationMoveInFromTop:
+        case CLViewAnimationMoveInFromTop:
             animationType = kCATransitionMoveIn;
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationPushFromLeft:
+        case CLViewAnimationPushFromLeft:
             animationType = kCATransitionPush;
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationPushFromRight:
+        case CLViewAnimationPushFromRight:
             animationType = kCATransitionPush;
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationPushFromBottom:
+        case CLViewAnimationPushFromBottom:
             animationType = kCATransitionPush;
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationPushFromTop:
+        case CLViewAnimationPushFromTop:
             animationType = kCATransitionPush;
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationRevealFromLeft:
+        case CLViewAnimationRevealFromLeft:
             animationType = kCATransitionReveal;
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationRevealFromRight:
+        case CLViewAnimationRevealFromRight:
             animationType = kCATransitionReveal;
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationRevealFromBottom:
+        case CLViewAnimationRevealFromBottom:
             animationType = kCATransitionReveal;
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationRevealFromTop:
+        case CLViewAnimationRevealFromTop:
             animationType = kCATransitionReveal;
             animationSubType = kCATransitionFromTop;
             break;
-        case AnimationCubeFromLeft:
+        case CLViewAnimationCubeFromLeft:
             animationType = @"cube";
             animationSubType = kCATransitionFromLeft;
             break;
-        case AnimationCubeFromRight:
+        case CLViewAnimationCubeFromRight:
             animationType = @"cube";
             animationSubType = kCATransitionFromRight;
             break;
-        case AnimationCubeFromBottom:
+        case CLViewAnimationCubeFromBottom:
             animationType = @"cube";
             animationSubType = kCATransitionFromBottom;
             break;
-        case AnimationCubeFromTop:
+        case CLViewAnimationCubeFromTop:
             animationType = @"cube";
             animationSubType = kCATransitionFromTop;
             break;

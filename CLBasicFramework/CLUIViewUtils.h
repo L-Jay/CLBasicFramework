@@ -9,38 +9,38 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, ViewAnimation) {
-    AnimationFade = 0,            //淡出
-    AnimationRipple,              //波纹
-    AnimationSuckEffect,          //吸收
-    AnimationFlipFromLeft,        //水平翻转,从左向右
-    AnimationFlipFromRight,       //水平翻转,从右向左
-    AnimationFlipFromBottm,       //竖直翻转,从下向上
-    AnimationFlipFromTop,         //竖直翻转,从上向下
-    AnimationPageCurlFromLeft,    //从左翻页
-    AnimationPageCurlFromRight,   //从右翻页
-    AnimationPageCurlFromBottom,  //从下翻页
-    AnimationPageCurlFromTop,     //从上翻页
-    AnimationPageUnCurlFromLeft,  //从左反翻页
-    AnimationPageUnCurlFromRight, //从右反翻页
-    AnimationPageUnCurlFromBottom,//从下反翻页
-    AnimationPageUnCurlFromTop,   //从上反翻页
-    AnimationMoveInFromLeft,      //从左覆盖
-    AnimationMoveInFromRight,     //从右覆盖
-    AnimationMoveInFromBottom,    //从下覆盖
-    AnimationMoveInFromTop,       //从上覆盖
-    AnimationPushFromLeft,        //从左推出
-    AnimationPushFromRight,       //从右推出
-    AnimationPushFromBottom,      //从下推出
-    AnimationPushFromTop,         //从上推出
-    AnimationRevealFromLeft,      //从左移开
-    AnimationRevealFromRight,     //从右移开
-    AnimationRevealFromBottom,    //从下移开
-    AnimationRevealFromTop,       //从上移开
-    AnimationCubeFromLeft,        //从左旋转
-    AnimationCubeFromRight,       //从右旋转
-    AnimationCubeFromBottom,      //从下旋转
-    AnimationCubeFromTop,         //从上旋转
+typedef NS_ENUM(NSInteger, CLViewAnimation) {
+    CLViewAnimationFade = 0,            //淡出
+    CLViewAnimationRipple,              //波纹
+    CLViewAnimationSuckEffect,          //吸收
+    CLViewAnimationFlipFromLeft,        //水平翻转,从左向右
+    CLViewAnimationFlipFromRight,       //水平翻转,从右向左
+    CLViewAnimationFlipFromBottm,       //竖直翻转,从下向上
+    CLViewAnimationFlipFromTop,         //竖直翻转,从上向下
+    CLViewAnimationPageCurlFromLeft,    //从左翻页
+    CLViewAnimationPageCurlFromRight,   //从右翻页
+    CLViewAnimationPageCurlFromBottom,  //从下翻页
+    CLViewAnimationPageCurlFromTop,     //从上翻页
+    CLViewAnimationPageUnCurlFromLeft,  //从左反翻页
+    CLViewAnimationPageUnCurlFromRight, //从右反翻页
+    CLViewAnimationPageUnCurlFromBottom,//从下反翻页
+    CLViewAnimationPageUnCurlFromTop,   //从上反翻页
+    CLViewAnimationMoveInFromLeft,      //从左覆盖
+    CLViewAnimationMoveInFromRight,     //从右覆盖
+    CLViewAnimationMoveInFromBottom,    //从下覆盖
+    CLViewAnimationMoveInFromTop,       //从上覆盖
+    CLViewAnimationPushFromLeft,        //从左推出
+    CLViewAnimationPushFromRight,       //从右推出
+    CLViewAnimationPushFromBottom,      //从下推出
+    CLViewAnimationPushFromTop,         //从上推出
+    CLViewAnimationRevealFromLeft,      //从左移开
+    CLViewAnimationRevealFromRight,     //从右移开
+    CLViewAnimationRevealFromBottom,    //从下移开
+    CLViewAnimationRevealFromTop,       //从上移开
+    CLViewAnimationCubeFromLeft,        //从左旋转
+    CLViewAnimationCubeFromRight,       //从右旋转
+    CLViewAnimationCubeFromBottom,      //从下旋转
+    CLViewAnimationCubeFromTop,         //从上旋转
 };
 
 @interface UIView(Util)
@@ -175,7 +175,7 @@ typedef NS_ENUM(NSInteger, ViewAnimation) {
  *
  *	@param 	animation 	动画类型,详见头文件.
  */
-- (void)startAnimation:(ViewAnimation)animation;
+- (void)startAnimation:(CLViewAnimation)animation;
 
 
 @end

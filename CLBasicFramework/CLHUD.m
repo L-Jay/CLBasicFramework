@@ -346,10 +346,10 @@ static CLHUDAnimation _animation = 0;
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor clearColor];
     label.font = font;
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
     label.numberOfLines = 0;
-    label.lineBreakMode = UILineBreakModeWordWrap;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.textLabel = label;
     [label release];
@@ -508,32 +508,32 @@ static CLHUDAnimation _animation = 0;
 #pragma mark - Text Methods
 + (void)showSucceed
 {
-    [[CLHUD shareHUD] showText:nil withImage:_succeedImageName imagePosition:HUDImagePositionTop duration:DurationFast];
+    [[CLHUD shareHUD] showText:nil withImage:_succeedImageName imagePosition:CLHUDImagePositionTop duration:DurationFast];
 }
 
 + (void)showSucceedWithText:(NSString *)text
 {
-    [[CLHUD shareHUD] showText:text withImage:_succeedImageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [[CLHUD shareHUD] showText:text withImage:_succeedImageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 + (void)showFailed
 {
-    [[CLHUD shareHUD] showText:nil withImage:_failImageName imagePosition:HUDImagePositionTop duration:DurationFast];
+    [[CLHUD shareHUD] showText:nil withImage:_failImageName imagePosition:CLHUDImagePositionTop duration:DurationFast];
 }
 
 + (void)showFailedWithText:(NSString *)text
 {
-    [[CLHUD shareHUD] showText:text withImage:_failImageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [[CLHUD shareHUD] showText:text withImage:_failImageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 + (void)showText:(NSString *)text
 {
-    [[CLHUD shareHUD] showText:text withImage:nil imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [[CLHUD shareHUD] showText:text withImage:nil imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 + (void)showImage:(NSString *)imageName
 {
-    [[CLHUD shareHUD] showText:nil withImage:imageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [[CLHUD shareHUD] showText:nil withImage:imageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 + (void)showText:(NSString *)text withImage:(NSString *)imageName imagePosition:(CLHUDImagePosition)position duration:(NSInteger)duration
@@ -544,32 +544,32 @@ static CLHUDAnimation _animation = 0;
 //=========== Instance Methods
 - (void)showSucceed
 {
-    [self showText:nil withImage:_succeedImageName imagePosition:HUDImagePositionTop duration:DurationFast];
+    [self showText:nil withImage:_succeedImageName imagePosition:CLHUDImagePositionTop duration:DurationFast];
 }
 
 - (void)showSucceedWithText:(NSString *)text
 {
-    [self showText:text withImage:_succeedImageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [self showText:text withImage:_succeedImageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 - (void)showFailed
 {
-    [self showText:nil withImage:_failImageName imagePosition:HUDImagePositionTop duration:DurationFast];
+    [self showText:nil withImage:_failImageName imagePosition:CLHUDImagePositionTop duration:DurationFast];
 }
 
 - (void)showFailedWithText:(NSString *)text
 {
-    [self showText:text withImage:_failImageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [self showText:text withImage:_failImageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 - (void)showText:(NSString *)text
 {
-    [self showText:text withImage:nil imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [self showText:text withImage:nil imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 - (void)showImage:(NSString *)imageName
 {
-    [self showText:nil withImage:imageName imagePosition:HUDImagePositionTop duration:DurationNormal];
+    [self showText:nil withImage:imageName imagePosition:CLHUDImagePositionTop duration:DurationNormal];
 }
 
 - (void)showText:(NSString *)text withImage:(NSString *)imageName imagePosition:(CLHUDImagePosition)position duration:(NSInteger)duration
@@ -638,8 +638,8 @@ static CLHUDAnimation _animation = 0;
         }
     }else {
         switch (position) {
-            case HUDImagePositionTop:
-            case HUDImagePositionBottom:
+            case CLHUDImagePositionTop:
+            case CLHUDImagePositionBottom:
             {
                 CGFloat width = self.imageView.width > self.textLabel.width ? self.imageView.width : self.textLabel.width + InnerMargins*2;
                 CGFloat height = self.imageView.height + self.textLabel.height + InnerMargins*3;
@@ -653,7 +653,7 @@ static CLHUDAnimation _animation = 0;
                 }
                 
                 CGFloat topY = (self.mainView.height - self.imageView.height - self.textLabel.height - InnerMargins)*0.5;
-                if (position == HUDImagePositionTop) {
+                if (position == CLHUDImagePositionTop) {
                     self.imageView.minY = topY;
                     self.textLabel.minY = self.imageView.maxY + InnerMargins;
                 }else {
@@ -665,8 +665,8 @@ static CLHUDAnimation _animation = 0;
                 self.textLabel.centerX = self.imageView.centerX;
             }
                 break;
-            case HUDImagePositionLeft:
-            case HUDImagePositionRight:
+            case CLHUDImagePositionLeft:
+            case CLHUDImagePositionRight:
             {
                 if (self.imageView.height > self.textLabel.height) {
                     self.imageView.minY = InnerMargins;
@@ -680,7 +680,7 @@ static CLHUDAnimation _animation = 0;
                 
                 self.mainView.width = self.imageView.width + self.textLabel.width + InnerMargins*3;
                 
-                if (position == HUDImagePositionLeft) {
+                if (position == CLHUDImagePositionLeft) {
                     self.imageView.minX = InnerMargins;
                     self.textLabel.minX = self.imageView.maxX + InnerMargins;
                 }else {
@@ -711,15 +711,15 @@ static CLHUDAnimation _animation = 0;
     if (!self.isShow) {
         self.isShow = YES;
         
-        if (_animation == HUDAnimationSacleSmall || _animation == HUDAnimationSacleSmallShake) {
+        if (_animation == CLHUDAnimationSacleSmall || _animation == CLHUDAnimationSacleSmall) {
             self.mainView.transform = CGAffineTransformMakeScale(2.0, 2.0);
             self.mainView.alpha = 0;
-        }else if (_animation == HUDAnimationSacleBig || _animation == HUDAnimationSacleBigShake) {
+        }else if (_animation == CLHUDAnimationSacleBig || _animation == CLHUDAnimationSacleSmall) {
             self.mainView.transform = CGAffineTransformMakeScale(0, 0);
             self.mainView.alpha = 0;
-        }else if (_animation == HUDAnimationFromLeftToRight || _animation == HUDAnimationFromLeftBackLeft) {
+        }else if (_animation == CLHUDAnimationFromLeftBackLeft || _animation == CLHUDAnimationFromLeftBackLeft) {
             self.mainView.maxX = 0;
-        }else if (_animation == HUDAnimationFromTopToBottom || _animation == HUDAnimationFromTopBackTop) {
+        }else if (_animation == CLHUDAnimationFromTopBackTop || _animation == CLHUDAnimationFromTopBackTop) {
             self.mainView.maxY = 0;
         }
         
