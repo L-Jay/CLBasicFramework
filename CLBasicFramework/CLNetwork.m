@@ -465,7 +465,8 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
             if ([[object allKeys] containsObject:self.resultKey]) {
                 NSInteger resultValue = [[object objectForKey:self.resultKey] integerValue];
                 if (resultValue != self.successValue) {
-                    error = [[NSError alloc] initWithDomain:[object objectForKey:self.messageKey] code:resultValue userInfo:object];
+                    NSString *domian = [object objectForKey:self.messageKey] ? : @"";
+                    error = [[NSError alloc] initWithDomain:domian code:resultValue userInfo:object];
                 }
             }
         }
