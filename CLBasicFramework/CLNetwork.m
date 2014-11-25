@@ -123,12 +123,12 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 #pragma mark - NetWork Request
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {
-    if (tag.length > 0)
-        [self cancelRequestWithTag:tag];
+    CLNetwork *netWork = [CLNetwork shareNetWork];
+    
+    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+        return;
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    CLNetwork *netWork = [CLNetwork shareNetWork];
     
     NSString *content = [self contentString:values useConstValue:YES];
     
@@ -165,12 +165,12 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id, NSError *, NSString *))result
 {
-    if (tag.length > 0)
-        [self cancelRequestWithTag:tag];
+    CLNetwork *netWork = [CLNetwork shareNetWork];
+    
+    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+        return;
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    CLNetwork *netWork = [CLNetwork shareNetWork];
     
     NSString *content = [self contentString:values useConstValue:YES];
     NSString *urlString = nil;
@@ -207,12 +207,12 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 //==================GET
 + (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {
-    if (tag.length > 0)
-        [self cancelRequestWithTag:tag];
+    CLNetwork *netWork = [CLNetwork shareNetWork];
+    
+    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+        return;
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    CLNetwork *netWork = [CLNetwork shareNetWork];
     
     NSString *content = [self contentString:values useConstValue:useValue];
     content = content.length ? [NSString stringWithFormat:@"?%@", content] : @"";
@@ -249,13 +249,13 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 + (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id, NSError *, NSString *))result
 {
-    if (tag.length > 0)
-        [self cancelRequestWithTag:tag];
-    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
+    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+        return;
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
     NSString *content = [self contentString:values useConstValue:useValue];
     content = content.length ? [NSString stringWithFormat:@"?%@", content] : @"";
     typeUrl = typeUrl.length ? typeUrl : @"";

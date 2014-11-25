@@ -63,6 +63,16 @@
 //        
 //        NSLog(@"tag: === %@", tag);
 //    }];
+//    
+//    [CLNetwork postRequestWithTypeUrl:@"Guess/history" keyAndValues:nil withTag:@"test" requestResultWithTag:^(id object, NSError *error, NSString *tag) {
+//        if (error) {
+//            NSLog(@"error %@", error);
+//        }else
+//            NSLog(@"object: %@", object);
+//        
+//        NSLog(@"tag: === %@", tag);
+//    }];
+
 }
 
 - (void)didReceiveMemoryWarning
