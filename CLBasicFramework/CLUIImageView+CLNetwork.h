@@ -23,9 +23,25 @@
 @property (nonatomic, copy) NSString *imageUrl;
 
 /**
- *	@brief	是否显示ActivityView.
+ *	@brief	是否显示ActivityView,默认为NO,显示.
  */
-@property (nonatomic) BOOL showActivityView;
+@property (nonatomic) BOOL dontShowActivityView;
+
+/**
+ *	@brief	是否只在wifi下下载图片,默认为NO.
+ */
+@property (nonatomic) BOOL onlyWIFI;
+
+/**
+ *	@brief	图片下载完成是否立即替换，默认为NO,替换.
+ */
+@property (nonatomic) BOOL dontReplaceImmediately;
+
+/**
+ *	@brief	是否使用下载原图(不使用压缩存储),默认为NO,使用.
+ */
+@property (nonatomic) BOOL dontUseOriginalImage;
+
 
 /**
  *	@brief	ActivityView的Style.

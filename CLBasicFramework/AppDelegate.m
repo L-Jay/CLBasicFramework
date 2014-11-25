@@ -10,6 +10,7 @@
 #import "NetworkViewController.h"
 #import "ImageNetworkViewController.h"
 #import "HUDViewController.h"
+#import "CLNetwork.h"
 
 @implementation AppDelegate
 
@@ -44,6 +45,11 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [CLNetwork registerNetWorkWithResultKeyAndSuccessValue:nil messageKey:nil error:^(NSError *error) {
+        NSLog(@"==== error  %@", error);
+    }];
+    
     return YES;
 }
 

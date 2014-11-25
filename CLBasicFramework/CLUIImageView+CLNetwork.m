@@ -11,10 +11,15 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CLNetWork.h"
 #import "CLCache.h"
+#import "Reachability.h"
 
 typedef void (^FinishBLock)(BOOL finish);
 
 static char const * const imageUrlChar = "imageUrl";
+static char const * const dontShow = "dontShow";
+static char const * const onlyWifi = "onlyWifi";
+static char const * const immediately = "immediately";
+static char const * const useOriginal = "useOriginal";
 static char const * const activityChar = "activity";
 static char const * const finishBlockChar = "finishBlock";
 static char const * const animationChar = "animation";
@@ -27,7 +32,6 @@ static char const * const animationChar = "animation";
 @end
 
 @implementation UIImageView(CLNetWork)
-@dynamic showActivityView;
 @dynamic activityStyle;
 @dynamic animation;
 
@@ -43,10 +47,17 @@ static char const * const animationChar = "animation";
 }
 
 #pragma mark - Propertys
-- (void)setShowActivityView:(BOOL)showActivityView
+- (BOOL)dontShowActivityView
+{
+    NSNumber *number = objc_getAssociatedObject(self, dontShow);
+    return [number boolValue];
+}
+
+- (void)setDontShowActivityView:(BOOL)dontShowActivityView
 {
     [self setup];
-    [self.activityView stopAnimating];
+    NSNumber *number = [NSNumber numberWithBool:dontShowActivityView];
+    objc_setAssociatedObject(self, dontShow, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setActivityStyle:(UIActivityIndicatorViewStyle)activityStyle
@@ -55,7 +66,42 @@ static char const * const animationChar = "animation";
     self.activityView.activityIndicatorViewStyle = activityStyle;
 }
 
-//====================
+- (BOOL)onlyWIFI
+{
+    NSNumber *number = objc_getAssociatedObject(self, onlyWifi);
+    return [number boolValue];
+}
+
+- (void)setOnlyWIFI:(BOOL)onlyWIFI
+{
+    NSNumber *number = [NSNumber numberWithBool:onlyWIFI];
+    objc_setAssociatedObject(self, onlyWifi, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)dontReplaceImmediately
+{
+    NSNumber *number = objc_getAssociatedObject(self, immediately);
+    return [number boolValue];
+}
+
+- (void)setDontReplaceImmediately:(BOOL)dontReplaceImmediately
+{
+    NSNumber *number = [NSNumber numberWithBool:dontReplaceImmediately];
+    objc_setAssociatedObject(self, immediately, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)dontUseOriginalImage
+{
+    NSNumber *number = objc_getAssociatedObject(self, useOriginal);
+    return [number boolValue];
+}
+
+- (void)setDontUseOriginalImage:(BOOL)dontUseOriginalImage
+{
+    NSNumber *number = [NSNumber numberWithBool:dontUseOriginalImage];
+    objc_setAssociatedObject(self, useOriginal, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (void)setAnimation:(CLViewAnimation)animation
 {
     objc_setAssociatedObject(self, animationChar, [NSNumber numberWithInteger:animation], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -68,7 +114,6 @@ static char const * const animationChar = "animation";
     return [number integerValue];
 }
 
-//====================
 - (FinishBLock)finishBlcok
 {
     return objc_getAssociatedObject(self, finishBlockChar);
@@ -79,7 +124,6 @@ static char const * const animationChar = "animation";
     objc_setAssociatedObject(self, finishBlockChar, finishBlcok, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-//====================
 - (UIActivityIndicatorView *)activityView
 {
     return objc_getAssociatedObject(self, activityChar);
@@ -90,7 +134,6 @@ static char const * const animationChar = "animation";
     objc_setAssociatedObject(self, activityChar, activityView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-//====================
 - (NSString *)imageUrl
 {
     return objc_getAssociatedObject(self, imageUrlChar);
@@ -98,11 +141,8 @@ static char const * const animationChar = "animation";
 
 - (void)setImageUrl:(NSString *)imageUrl
 {
-    if (imageUrl.length < 1) {
+    if (imageUrl.length < 1)
         return;
-    }
-    
-    [CLNetwork cancelRequestWithTag:imageUrl];
     
     objc_setAssociatedObject(self, imageUrlChar, imageUrl, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
@@ -114,23 +154,29 @@ static char const * const animationChar = "animation";
         [image release];
     } else {
         [self setup];
-        [self.activityView startAnimating];
+        
+        if (self.dontShowActivityView)
+            [self.activityView stopAnimating];
+        else
+            [self.activityView startAnimating];
         
         __block typeof(self) bself = self;
         
-        //
-        [CLNetwork getRequestWithUrl:self.imageUrl withTag:imageUrl requestResult:^(id object, NSError *error){
+        [CLNetwork getRequestWithUrl:self.imageUrl withTag:[imageUrl lastPathComponent] requestResult:^(id object, NSError *error){
             [bself.activityView stopAnimating];
             
             __block UIImage *image = [[UIImage alloc] initWithData:object];
             if (image) {
-                if (self.finishBlcok) {
+                if (self.finishBlcok)
                     self.finishBlcok(YES);
-                }
                 
-                [CLCache writeToCache:[bself.imageUrl lastPathComponent] directoryName:@"ImageCache" withData:object];
+                if (self.dontUseOriginalImage) {
+                    NSData *smallData = UIImageJPEGRepresentation(image, 0.5);
+                    [CLCache writeToCache:[bself.imageUrl lastPathComponent] directoryName:@"ImageCache" withData:smallData];
+                }else
+                    [CLCache writeToCache:[bself.imageUrl lastPathComponent] directoryName:@"ImageCache" withData:object];
                 
-                if (image) {
+                if (image && !self.dontReplaceImmediately) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         bself.image = image;
                         [image release];
@@ -160,7 +206,6 @@ static char const * const animationChar = "animation";
     }
 }
 
-//====================
 - (void)downloadImageProgress:(void (^)(CGFloat))imageProgress
 {
     [CLNetwork requestProgressWithTag:self.imageUrl progress:^(unsigned long long reciveLength, unsigned long long totalLength, float progress){
