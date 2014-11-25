@@ -123,35 +123,23 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 #pragma mark - NetWork Request
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {
-    //
     if (tag.length > 0)
         [self cancelRequestWithTag:tag];
     
-    //
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    
-    
-    //
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    //
     NSString *content = [self contentString:values useConstValue:YES];
     
-    //
     NSString *urlString = nil;
-    if (typeUrl) {
+    if (typeUrl)
         urlString = [NSString stringWithFormat:@"%@%@", netWork.basicUrl, typeUrl];
-    }
-    else{
+    else
         urlString = netWork.basicUrl;
-    }
     
-    
-    //
     NSURL *requestURL = [[NSURL alloc] initWithString:urlString];
     
-    //#warning learn
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL cachePolicy:0 timeoutInterval:20];
     NSString *contentLength = [NSString stringWithFormat:@"%lu", (unsigned long)[content length]];
     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -159,7 +147,6 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[content dataUsingEncoding:NSUTF8StringEncoding]];
     
-    //
     NSURLConnection *urlConnection =[[NSURLConnection alloc] initWithRequest:request delegate:netWork startImmediately:NO];
     urlConnection.reciveData = [NSMutableData data];
     urlConnection.requestBlock = result;
@@ -178,35 +165,22 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id, NSError *, NSString *))result
 {
-    //
     if (tag.length > 0)
         [self cancelRequestWithTag:tag];
     
-    //
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    
-    
-    //
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    //
     NSString *content = [self contentString:values useConstValue:YES];
-    
-    //
     NSString *urlString = nil;
-    if (typeUrl) {
+    if (typeUrl)
         urlString = [NSString stringWithFormat:@"%@%@", netWork.basicUrl, typeUrl];
-    }
-    else{
+    else
         urlString = netWork.basicUrl;
-    }
     
-    
-    //
     NSURL *requestURL = [[NSURL alloc] initWithString:urlString];
     
-    //#warning learn
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL cachePolicy:0 timeoutInterval:20];
     NSString *contentLength = [NSString stringWithFormat:@"%lu", (unsigned long)[content length]];
     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -214,7 +188,6 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[content dataUsingEncoding:NSUTF8StringEncoding]];
     
-    //
     NSURLConnection *urlConnection =[[NSURLConnection alloc] initWithRequest:request delegate:netWork startImmediately:NO];
     urlConnection.reciveData = [NSMutableData data];
     urlConnection.requestWithTagBlock = result;
@@ -234,33 +207,23 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 //==================GET
 + (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {
-    //
     if (tag.length > 0)
         [self cancelRequestWithTag:tag];
     
-    
-    //
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    
-    //
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    //
     NSString *content = [self contentString:values useConstValue:useValue];
     content = content.length ? [NSString stringWithFormat:@"?%@", content] : @"";
     typeUrl = typeUrl.length ? typeUrl : @"";
     
-    //
     NSString *urlString = nil;
-    if (useUrl) {
+    if (useUrl)
         urlString = [NSString stringWithFormat:@"%@%@%@", netWork.basicUrl, typeUrl, content];
-    }
-    else {
+    else
         urlString = [NSString stringWithFormat:@"%@%@", typeUrl, content];
-    }
     
-    //
     NSURL *requestURL = [[NSURL alloc] initWithString:urlString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL
                                                                 cachePolicy:0
@@ -268,7 +231,6 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
     [request setHTTPMethod:@"GET"];
     [request addValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
     
-    //
     NSURLConnection *urlConnection =[[NSURLConnection alloc] initWithRequest:request delegate:netWork startImmediately:NO];
     urlConnection.reciveData = [NSMutableData data];
     urlConnection.requestBlock = result;
@@ -287,33 +249,23 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 + (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id, NSError *, NSString *))result
 {
-    //
     if (tag.length > 0)
         [self cancelRequestWithTag:tag];
     
-    
-    //
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    
-    //
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    //
     NSString *content = [self contentString:values useConstValue:useValue];
     content = content.length ? [NSString stringWithFormat:@"?%@", content] : @"";
     typeUrl = typeUrl.length ? typeUrl : @"";
     
-    //
     NSString *urlString = nil;
-    if (useUrl) {
+    if (useUrl)
         urlString = [NSString stringWithFormat:@"%@%@%@", netWork.basicUrl, typeUrl, content];
-    }
-    else {
+    else
         urlString = [NSString stringWithFormat:@"%@%@", typeUrl, content];
-    }
     
-    //
     NSURL *requestURL = [[NSURL alloc] initWithString:urlString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL
                                                                 cachePolicy:0
@@ -321,7 +273,6 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
     [request setHTTPMethod:@"GET"];
     [request addValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
     
-    //
     NSURLConnection *urlConnection =[[NSURLConnection alloc] initWithRequest:request delegate:netWork startImmediately:NO];
     urlConnection.reciveData = [NSMutableData data];
     urlConnection.requestWithTagBlock = result;
@@ -406,7 +357,7 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 + (void)requestProgressWithTag:(NSString *)tag progress:(void (^)(unsigned long long, unsigned long long, float))progress
 {
     if (tag.length < 1) {
-        CLLog(@"没有输入tag值，无法获取progress");
+        NSLog(@"没有输入tag值，无法获取progress");
         return;
     }
     
@@ -420,7 +371,7 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 + (void)sendProgressWithTag:(NSString *)tag progress:(void (^)(unsigned long long, unsigned long long, float))progress
 {
     if (tag.length < 1) {
-        CLLog(@"没有输入tag值，无法获取progress");
+        NSLog(@"没有输入tag值，无法获取progress");
         return;
     }
     
@@ -435,7 +386,7 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 + (void)cancelRequestWithTag:(NSString *)tag
 {
     if (tag.length < 1) {
-        CLLog(@"没有输入tag值，无法取消响应的请求");
+        NSLog(@"没有输入tag值，无法取消响应的请求");
         return;
     }
     
