@@ -80,9 +80,22 @@
 
 
 ///---------------------------------------------------------------------------------------
-/// @name Download Methods
+/// @name Cache Methods
 ///---------------------------------------------------------------------------------------
 
+/**
+ *	@brief	缓存图片.
+ *
+ *	@param 	image 	图片.
+ */
++ (void)cacheImage:(UIImage *)image withName:(NSString *)name;
+
+/**
+ *	@brief	缓存图片.
+ *
+ *	@param 	imageData 	图片数据.
+ */
++ (void)cacheImageData:(NSData *)imageData withName:(NSString *)name;
 
 /**
  *	@brief	清除图片缓存.

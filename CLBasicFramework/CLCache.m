@@ -130,7 +130,7 @@
         [manager removeItemAtPath:path error:nil];
     }
 }
-+ (void)removeDataWithName:(NSString *)fileName directoryName:(NSString *)directoryName isDocument:(BOOL)document
++ (void)removeDataWithName:(NSString *)fileName directoryName:(NSString *)directoryName inDocument:(BOOL)document
 {
     NSString *directory = nil;
     if (document)

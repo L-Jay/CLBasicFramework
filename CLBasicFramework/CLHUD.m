@@ -953,7 +953,8 @@ static CLHUDAnimation _animation = 0;
 
 - (void)finishHide
 {
-    self.complete();
+    if (self.complete)
+        self.complete();
     
     if (self.onWindow) {
         [[[UIApplication sharedApplication].delegate window] makeKeyAndVisible];

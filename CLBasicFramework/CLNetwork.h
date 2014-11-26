@@ -124,7 +124,7 @@
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)getRequestWithUrl:(NSString *)url withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result;
++ (void)getRequestWithUrl:(NSString *)url withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
 + (void)getRequestWithUrl:(NSString *)url withTag:(NSString *)tag requestResultWithTag:(void (^)(id object, NSError *error, NSString *tag))result;
 
 
@@ -139,7 +139,7 @@
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)getRequestWithUrl:(NSString *)url keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result;
++ (void)getRequestWithUrl:(NSString *)url keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
 
 
 /**
@@ -152,7 +152,7 @@
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)typeUrl withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result;
++ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)typeUrl withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
 
 
 /**
@@ -166,7 +166,7 @@
  *
  *	@discussion	一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)keyAndValue messageKey:(NSString *)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.
  */
-+ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result;
++ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
 
 
 

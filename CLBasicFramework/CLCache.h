@@ -113,7 +113,7 @@
  *	@param 	directoryName 	文件夹名称,若为nil,则从根目录查找,否从文件夹内查找.
  *	@param 	document 	是否存储在document里,是从document中查找,否从Cache中查找.
  */
-+ (void)removeDataWithName:(NSString *)fileName directoryName:(NSString *)directoryName isDocument:(BOOL)document;
++ (void)removeDataWithName:(NSString *)fileName directoryName:(NSString *)directoryName inDocument:(BOOL)document;
 
 
 @end

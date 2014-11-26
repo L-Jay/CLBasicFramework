@@ -11,6 +11,7 @@
 #import "ImageNetworkViewController.h"
 #import "HUDViewController.h"
 #import "CLNetwork.h"
+#import "CLHUD.h"
 
 @implementation AppDelegate
 
@@ -48,6 +49,8 @@
     
     [CLNetwork registerNetWorkWithResultKeyAndSuccessValue:nil messageKey:nil error:^(NSError *error) {
         NSLog(@"==== error  %@", error);
+        
+        [CLHUD showFailedWithText:error.domain];
     }];
     
     return YES;

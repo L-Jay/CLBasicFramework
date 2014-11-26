@@ -21,13 +21,18 @@
 {
     [super viewDidLoad];
     
+    //[UIImageView removeImageCache];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"get" style:UIBarButtonItemStyleBordered target:self action:@selector(getImage)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"cache" style:UIBarButtonItemStyleBordered target:self action:@selector(cacheImage)];
 	
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imgView.backgroundColor = [UIColor orangeColor];
     //imgView.dontShowActivityView = YES;
     //imgView.dontReplaceImmediately = YES;
     imgView.dontUseOriginalImage = YES;
+    imgView.onlyWIFI = YES;
     [self.view addSubview:imgView];
     self.imgView = imgView;
     [imgView release];
@@ -35,7 +40,17 @@
 
 - (void)getImage
 {
-    self.imgView.imageUrl = @"http://b.hiphotos.baidu.com/image/w%3D1920%3Bcrop%3D0%2C0%2C1920%2C1080/sign=b838b9c6c0cec3fd8b3ea37ce4b8ef5c/30adcbef76094b36ad855fe7a0cc7cd98d109da0.jpg";
+    self.imgView.imageUrl = @"http://d.hiphotos.baidu.com/image/pic/item/2e2eb9389b504fc2ae148d11e7dde71190ef6d5e.jpg";
+}
+
+- (void)cacheImage
+{
+    UIImage *image = [UIImage imageNamed:@"test.jpg"];
+    
+    [UIImageView cacheImage:image withName:@"normal"];
+    
+    [UIImageView cacheImageData:UIImageJPEGRepresentation(image, 0.5) withName:@"jpgcache"];
+    [UIImageView cacheImageData:UIImagePNGRepresentation(image) withName:@"pngcache"];
 }
 
 @end

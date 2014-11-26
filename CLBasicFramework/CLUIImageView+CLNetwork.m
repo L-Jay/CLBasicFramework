@@ -146,6 +146,13 @@ static char const * const animationChar = "animation";
     
     objc_setAssociatedObject(self, imageUrlChar, imageUrl, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    if (status == NotReachable || (self.onlyWIFI && status != ReachableViaWiFi))
+        return;
+    
+    
     UIImage *image = [[UIImage alloc] initWithData:[CLCache getDataInCache:[self.imageUrl lastPathComponent] directoryName:@"ImageCache"]];
     
     if (image) {
@@ -219,9 +226,20 @@ static char const * const animationChar = "animation";
 }
 
 #pragma mark - Class Methods
++ (void)cacheImage:(UIImage *)image withName:(NSString *)name
+{
+    [self cacheImageData:UIImageJPEGRepresentation(image, 0.5) withName:name];
+}
+
++ (void)cacheImageData:(NSData *)imageData withName:(NSString *)name
+{
+    if (imageData)
+        [CLCache writeToCache:name directoryName:@"CLImageCache" withData:imageData];
+}
+
 + (void)removeImageCache
 {
-    [CLCache removeDataWithName:nil directoryName:@"ImageCache" isDocument:NO];
+    [CLCache removeDataWithName:nil directoryName:@"CLImageCache" inDocument:NO];
 }
 
 @end
