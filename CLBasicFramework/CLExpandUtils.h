@@ -72,3 +72,11 @@
 
 
 @end
+
+@interface NSTimer (Expand)
+
+- (void)pauseTimer;
+- (void)resumeTimer;
+- (void)resumeTimerAfterTimeInterval:(NSTimeInterval)interval;
+
+@end

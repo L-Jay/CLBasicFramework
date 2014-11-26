@@ -9,6 +9,7 @@
 #import "NetworkViewController.h"
 #import "CLNetwork.h"
 #import "CLHUD.h"
+#import "CLBasicFramework.h"
 
 @interface NetworkViewController ()
 
@@ -77,20 +78,23 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"post" style:UIBarButtonItemStyleBordered target:self action:@selector(postImage)];
 
 
-    [CLNetwork registerNetWorkWithBasicUrl:@"http://www.thefront.com.cn/zqjcw2/" constValue:nil];
-    
-    NSDictionary *dic = @{@"mobile": @"18600635255", @"pwd": @"111222"};
-    [CLNetwork postRequestWithTypeUrl:@"user/login" keyAndValues:dic withTag:@"login" requestResult:^(id Object, NSError *error) {
-        if (error) {
-            NSLog(@"error %@", error);
-        }else {
-            NSLog(@"obj %@", Object);
-        }
-    }];
+//    [CLNetwork registerNetWorkWithBasicUrl:@"http://www.thefront.com.cn/zqjcw2/" constValue:nil];
+//    
+//    NSDictionary *dic = @{@"mobile": @"18600635255", @"pwd": @"111222"};
+//    [CLNetwork postRequestWithTypeUrl:@"user/login" keyAndValues:dic withTag:@"login" requestResult:^(id Object, NSError *error) {
+//        if (error) {
+//            NSLog(@"error %@", error);
+//        }else {
+//            NSLog(@"obj %@", Object);
+//        }
+//    }];
 }
 
 - (void)postImage
 {
+    
+    [CLBasicFramework frameworkVersionAndAuthorInfo];
+    
 //    UIImage *img = [UIImage imageNamed:@"test.jpg"];
 //    
 //    [CLNetwork postImageRequestWithTypeUrl:@"user/change_avatar" keyAndValues:nil image:img withTag:nil requestResult:^(id object, NSError *error) {
@@ -102,16 +106,16 @@
 //        }
 //    }];
     
-    NSData *imgData = UIImageJPEGRepresentation([UIImage imageNamed:@"lanzhu"], 0.5);
-    
-    [CLNetwork postImageRequestWithTypeUrl:@"user/change_avatar" keyAndValues:nil imageData:imgData withTag:nil requestResult:^(id object, NSError *error) {
-        if (error) {
-            NSLog(@"error %@", error);
-        }else {
-            NSLog(@"obj %@", object);
-            [CLHUD showFailedWithText:[object objectForKey:@"msg"]];
-        }
-    }];
+//    NSData *imgData = UIImageJPEGRepresentation([UIImage imageNamed:@"lanzhu"], 0.5);
+//    
+//    [CLNetwork postImageRequestWithTypeUrl:@"user/change_avatar" keyAndValues:nil imageData:imgData withTag:nil requestResult:^(id object, NSError *error) {
+//        if (error) {
+//            NSLog(@"error %@", error);
+//        }else {
+//            NSLog(@"obj %@", object);
+//            [CLHUD showFailedWithText:[object objectForKey:@"msg"]];
+//        }
+//    }];
 }
 
 - (void)didReceiveMemoryWarning

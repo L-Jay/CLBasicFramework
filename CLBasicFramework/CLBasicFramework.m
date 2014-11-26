@@ -40,5 +40,13 @@ CGFloat DeviceSystemVersion() {
     return uuid;
 }
 
++ (void)frameworkVersionAndAuthorInfo
+{
+    NSString *content = [NSString stringWithFormat:@"版本号: 1.1\n作者: 崔志伟\nQQ:892792124\n欢迎大家提建议!"];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"信息" message:content delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
+    [alertView show];
+    [alertView release];
+}
+
 @end
 
