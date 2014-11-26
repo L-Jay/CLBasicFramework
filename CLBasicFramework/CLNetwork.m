@@ -204,6 +204,79 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
     [urlConnection release];
 }
 
++ (void)postImageRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values image:(UIImage *)image withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
+{
+    [self postImageRequestWithTypeUrl:typeUrl keyAndValues:values imageData:UIImageJPEGRepresentation(image, 0.5) withTag:tag requestResult:result];
+}
+
++ (void)postImageRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values imageData:(NSData *)imageData withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
+{
+    if (!imageData)
+        return;
+    
+    CLNetwork *netWork = [CLNetwork shareNetWork];
+    
+    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+        return;
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSString *urlString = nil;
+    if (typeUrl)
+        urlString = [NSString stringWithFormat:@"%@%@", netWork.basicUrl, typeUrl];
+    else
+        urlString = netWork.basicUrl;
+    
+    NSURL *requestURL = [[NSURL alloc] initWithString:urlString];
+    
+    NSString *boundary = @"CLNetworkBoundary7d33a816d302b6";
+    NSString *midBoundary = [NSString stringWithFormat:@"--%@", boundary];
+    NSString *endBoundary = [NSString stringWithFormat:@"%@--", midBoundary];
+    
+    NSMutableString *bodyString = [NSMutableString string];
+    
+    for (NSString *key in [values allKeys]) {
+        [bodyString appendFormat:@"%@\r\n", midBoundary];
+        [bodyString appendFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", key];
+        [bodyString appendFormat:@"%@\r\n", [values objectForKey:key]];
+    }
+    
+    [bodyString appendFormat:@"%@\r\n", midBoundary];
+    [bodyString appendFormat:@"Content-Disposition: form-data; name=\"imageName\"; filename=\"fileName.png\"\r\n"];
+    [bodyString appendFormat:@"Content-Type: image/png, image/jpge, image/gif, image/jpeg, image/pjpeg, image/pjpeg\r\n\r\n"];
+    
+    NSString *endString = [NSString stringWithFormat:@"\r\n%@", endBoundary];
+    
+    NSMutableData *postData = [NSMutableData data];
+    [postData appendData:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    [postData appendData:imageData];
+    [postData appendData:[endString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    NSString *contentLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL cachePolicy:0 timeoutInterval:20];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    [request addValue:contentLength forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:postData];
+    
+    NSURLConnection *urlConnection =[[NSURLConnection alloc] initWithRequest:request delegate:netWork startImmediately:NO];
+    urlConnection.reciveData = [NSMutableData data];
+    urlConnection.requestBlock = result;
+    if (tag.length > 0)
+        urlConnection.tag = tag;
+    [urlConnection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    [urlConnection start];
+    
+    if (tag.length > 0)
+        [netWork.requestDic setObject:urlConnection forKey:tag];
+    
+    [requestURL release];
+    [request release];
+    [urlConnection release];
+}
+
 //==================GET
 + (void)getRequestUseBasicUrl:(BOOL)useUrl typeUrl:(NSString *)typeUrl useConst:(BOOL)useValue keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {

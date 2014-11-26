@@ -91,6 +91,9 @@
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id object, NSError *error, NSString *tag))result;
 
++ (void)postImageRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values image:(UIImage *)image withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
++ (void)postImageRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values imageData:(NSData *)imageData withTag:(NSString *)tag requestResult:(void (^)(id object, NSError *error))result;
+
 
 ///---------------------------------------------------------------------------------------
 /// @name GET Request Methods
