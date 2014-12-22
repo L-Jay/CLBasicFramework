@@ -169,28 +169,32 @@ static char const * const animationChar = "animation";
         
         __block typeof(self) bself = self;
         
-        [CLNetwork getRequestWithUrl:self.imageUrl withTag:[imageUrl lastPathComponent] requestResult:^(id object, NSError *error){
+        [CLNetwork getRequestWithUrl:self.imageUrl withTag:[imageUrl lastPathComponent] requestResultWithTag:^(id object, NSError *error, NSString *tag) {
             [bself.activityView stopAnimating];
             
-            __block UIImage *image = [[UIImage alloc] initWithData:object];
+            __block UIImage *image = nil;
+            if ([object isKindOfClass:[NSData class]])
+                image = [[UIImage alloc] initWithData:object];
+            
             if (image) {
                 if (self.finishBlcok)
                     self.finishBlcok(YES);
                 
                 if (self.dontUseOriginalImage) {
                     NSData *smallData = UIImageJPEGRepresentation(image, 0.5);
-                    [CLCache writeToCache:[bself.imageUrl lastPathComponent] directoryName:@"ImageCache" withData:smallData];
+                    [CLCache writeToCache:tag directoryName:@"ImageCache" withData:smallData];
                 }else
-                    [CLCache writeToCache:[bself.imageUrl lastPathComponent] directoryName:@"ImageCache" withData:object];
+                    [CLCache writeToCache:tag directoryName:@"ImageCache" withData:object];
                 
-                if (image && !self.dontReplaceImmediately) {
+                if (image && !self.dontReplaceImmediately && [[bself.imageUrl lastPathComponent] isEqualToString:tag]) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         bself.image = image;
                         [image release];
                         [bself setNeedsLayout];
                         [bself startAnimation:self.animation];
                     });
-                }
+                }else
+                    NSLog(@"-=-=-=-=-=-");
             }else {
                 if (self.finishBlcok) {
                     self.finishBlcok(NO);

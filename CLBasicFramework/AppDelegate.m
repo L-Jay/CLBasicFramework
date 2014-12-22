@@ -12,6 +12,7 @@
 #import "HUDViewController.h"
 #import "CLNetwork.h"
 #import "CLHUD.h"
+#import "ListTableViewController.h"
 
 @implementation AppDelegate
 
@@ -32,8 +33,12 @@
     hud.title = @"HUD";
     UINavigationController *hudNav = [[UINavigationController alloc] initWithRootViewController:hud];
     
+    ListTableViewController *listVC = [[ListTableViewController alloc] init];
+    listVC.title = @"list";
+    UINavigationController *listNav = [[UINavigationController alloc] initWithRootViewController:listVC];
+    
     UITabBarController *tabbar = [[UITabBarController alloc] init];
-    tabbar.viewControllers = @[netNav, imgNav, hudNav];
+    tabbar.viewControllers = @[netNav, imgNav, hudNav, listNav];
     self.window.rootViewController = tabbar;
     
     [network release];
@@ -42,16 +47,22 @@
     [image release];
     [imgNav release];
     
+    [hud release];
+    [hudNav release];
+    
+    [listVC release];
+    [listNav release];
+    
     [tabbar  release];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [CLNetwork registerNetWorkWithResultKeyAndSuccessValue:nil messageKey:nil error:^(NSError *error) {
-        NSLog(@"==== error  %@", error);
-        
-        [CLHUD showFailedWithText:error.domain];
-    }];
+//    [CLNetwork registerNetWorkWithResultKeyAndSuccessValue:nil messageKey:nil error:^(NSError *error) {
+//        NSLog(@"==== error  %@", error);
+//        
+//        [CLHUD showFailedWithText:error.domain];
+//    }];
     
     return YES;
 }

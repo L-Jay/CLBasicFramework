@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */; };
-		0B3968E81A26169A00214F3A /* CLCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3968E71A26169A00214F3A /* CLCycleScrollView.m */; };
+		0B2CB4A01A47FF1C001FDCCB /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CB49F1A47FF1C001FDCCB /* ListTableViewController.m */; };
 		0B5780C91955299300CF2DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780C81955299300CF2DCF /* Foundation.framework */; };
 		0B5780CD1955299300CF2DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780CC1955299300CF2DCF /* UIKit.framework */; };
 		0B5780D31955299300CF2DCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B5780D11955299300CF2DCF /* InfoPlist.strings */; };
@@ -47,8 +47,8 @@
 /* Begin PBXFileReference section */
 		0B06B6B5195724A100AD3B12 /* ImageNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageNetworkViewController.h; sourceTree = "<group>"; };
 		0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageNetworkViewController.m; sourceTree = "<group>"; };
-		0B3968E61A26169A00214F3A /* CLCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCycleScrollView.h; sourceTree = "<group>"; };
-		0B3968E71A26169A00214F3A /* CLCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCycleScrollView.m; sourceTree = "<group>"; };
+		0B2CB49E1A47FF1C001FDCCB /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		0B2CB49F1A47FF1C001FDCCB /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		0B5780C51955299300CF2DCF /* CLBasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLBasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5780C81955299300CF2DCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B5780CC1955299300CF2DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -153,6 +153,8 @@
 				0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */,
 				8CEC41D31A230B8B0049CA50 /* HUDViewController.h */,
 				8CEC41D41A230B8B0049CA50 /* HUDViewController.m */,
+				0B2CB49E1A47FF1C001FDCCB /* ListTableViewController.h */,
+				0B2CB49F1A47FF1C001FDCCB /* ListTableViewController.m */,
 				0B5780F7195529A200CF2DCF /* CLBasicFramework */,
 				0B5780DA1955299300CF2DCF /* Images.xcassets */,
 				0B5780CF1955299300CF2DCF /* Supporting Files */,
@@ -200,8 +202,6 @@
 				0B5780FF19552BD800CF2DCF /* CLUIImageView+CLNetwork.m */,
 				0B57810119552C0000CF2DCF /* CLHUD.h */,
 				0B57810219552C0000CF2DCF /* CLHUD.m */,
-				0B3968E61A26169A00214F3A /* CLCycleScrollView.h */,
-				0B3968E71A26169A00214F3A /* CLCycleScrollView.m */,
 				0B57810419552C2800CF2DCF /* CLCache.h */,
 				0B57810519552C2800CF2DCF /* CLCache.m */,
 				0B57810719552D0B00CF2DCF /* CLUIViewUtils.h */,
@@ -318,7 +318,6 @@
 				0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */,
 				8CEC41D51A230B8B0049CA50 /* HUDViewController.m in Sources */,
 				0B57810919552D0B00CF2DCF /* CLUIViewUtils.m in Sources */,
-				0B3968E81A26169A00214F3A /* CLCycleScrollView.m in Sources */,
 				0B57810F19552D6200CF2DCF /* CLExpandUtils.m in Sources */,
 				0B5780D91955299300CF2DCF /* AppDelegate.m in Sources */,
 				0B5780D51955299300CF2DCF /* main.m in Sources */,
@@ -327,6 +326,7 @@
 				0B57810019552BD800CF2DCF /* CLUIImageView+CLNetwork.m in Sources */,
 				0B5780FD19552A9F00CF2DCF /* CLNetwork.m in Sources */,
 				0B57811719552D7E00CF2DCF /* Reachability.m in Sources */,
+				0B2CB4A01A47FF1C001FDCCB /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
