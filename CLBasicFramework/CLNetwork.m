@@ -31,6 +31,8 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 @property (nonatomic, copy) NSString *tag;
 
+@property (nonatomic, assign) NSInteger statusCode;
+
 @end
 
 @interface CLNetwork ()<NSURLConnectionDelegate>
@@ -507,6 +509,8 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
+    connection.statusCode = [(NSHTTPURLResponse *)response statusCode];
+    
     connection.getFileLength = [NSNumber numberWithUnsignedLongLong:[response expectedContentLength]];
     
     if (connection.getProgressBlock) {
@@ -605,12 +609,18 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
         object = connection.reciveData;
     }else {
         if ([object isKindOfClass:[NSDictionary class]]) {
-            if ([[object allKeys] containsObject:self.resultKey]) {
-                NSInteger resultValue = [[object objectForKey:self.resultKey] integerValue];
-                if (resultValue != self.successValue) {
-                    NSString *domian = [object objectForKey:self.messageKey] ? : @"";
-                    error = [[NSError alloc] initWithDomain:domian code:resultValue userInfo:object];
+            if (self.resultKey) {
+                if ([[object allKeys] containsObject:self.resultKey]) {
+                    NSInteger resultValue = [[object objectForKey:self.resultKey] integerValue];
+                    if (resultValue != self.successValue) {
+                        NSString *domian = [object objectForKey:self.messageKey] ? : @"";
+                        error = [[NSError alloc] initWithDomain:domian code:resultValue userInfo:object];
+                    }
                 }
+            }else {
+                NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:object];
+                [tempDic setObject:[NSString stringWithFormat:@"%ld", (long)connection.statusCode] forKey:@"CLStatusCode"];
+                object = tempDic;
             }
         }
     }
@@ -672,6 +682,7 @@ static char const * const sendProgressBlockChar = "sendProgressBlock";
 static char const * const getFileLengthChar = "getFileLength";
 static char const * const sendFileLengthChar = "sendFileLength";
 static char const * const tagChar = "tag";
+static char const * const statusCodeChar = "clstatusCode";
 
 - (void)dealloc
 {
@@ -768,6 +779,19 @@ static char const * const tagChar = "tag";
 - (void)setTag:(NSString *)tag
 {
     objc_setAssociatedObject(self, tagChar, tag, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSInteger)statusCode
+{
+    NSNumber *number = objc_getAssociatedObject(self, statusCodeChar);
+    
+    return [number integerValue];
+}
+
+- (void)setStatusCode:(NSInteger)statusCode
+{
+    NSNumber *number = [NSNumber numberWithInteger:statusCode];
+    objc_setAssociatedObject(self, statusCodeChar, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
