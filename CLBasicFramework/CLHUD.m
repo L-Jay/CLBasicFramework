@@ -953,9 +953,6 @@ static CLHUDAnimation _animation = 0;
 
 - (void)finishHide
 {
-    if (self.complete)
-        self.complete();
-    
     if (self.onWindow) {
         [[[UIApplication sharedApplication].delegate window] makeKeyAndVisible];
         self.window.hidden = YES;
@@ -982,6 +979,10 @@ static CLHUDAnimation _animation = 0;
     self.willHide = NO;
     self.oldText = nil;
     self.oldImageName = nil;
+    
+    if (self.complete)
+        self.complete();
+
     [self removeFromSuperview];
 }
 

@@ -146,13 +146,6 @@ static char const * const animationChar = "animation";
     
     objc_setAssociatedObject(self, imageUrlChar, imageUrl, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
-    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus status = [reachability currentReachabilityStatus];
-    
-    if (status == NotReachable || (self.onlyWIFI && status != ReachableViaWiFi))
-        return;
-    
-    
     UIImage *image = [[UIImage alloc] initWithData:[CLCache getDataInCache:[self.imageUrl lastPathComponent] directoryName:@"ImageCache"]];
     
     if (image) {
@@ -160,6 +153,12 @@ static char const * const animationChar = "animation";
         [self setNeedsLayout];
         [image release];
     } else {
+        Reachability *reachability = [Reachability reachabilityForInternetConnection];
+        NetworkStatus status = [reachability currentReachabilityStatus];
+        
+        if (status == NotReachable || (self.onlyWIFI && status != ReachableViaWiFi))
+            return;
+
         [self setup];
         
         if (self.dontShowActivityView)
@@ -193,8 +192,7 @@ static char const * const animationChar = "animation";
                         [bself setNeedsLayout];
                         [bself startAnimation:self.animation];
                     });
-                }else
-                    NSLog(@"-=-=-=-=-=-");
+                }
             }else {
                 if (self.finishBlcok) {
                     self.finishBlcok(NO);

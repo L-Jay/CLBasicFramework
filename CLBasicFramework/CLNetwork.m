@@ -126,9 +126,11 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResult:(void (^)(id, NSError *))result
 {
     CLNetwork *netWork = [CLNetwork shareNetWork];
-    
-    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+    NSURLConnection *connection = [netWork.requestDic objectForKey:tag];
+    if (tag.length > 0 && connection) {
+        connection.requestBlock = result;
         return;
+    }
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
@@ -168,9 +170,11 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 + (void)postRequestWithTypeUrl:(NSString *)typeUrl keyAndValues:(NSDictionary *)values withTag:(NSString *)tag requestResultWithTag:(void (^)(id, NSError *, NSString *))result
 {
     CLNetwork *netWork = [CLNetwork shareNetWork];
-    
-    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+    NSURLConnection *connection = [netWork.requestDic objectForKey:tag];
+    if (tag.length > 0 && connection) {
+        connection.requestWithTagBlock = result;
         return;
+    }
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
@@ -217,9 +221,11 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
         return;
     
     CLNetwork *netWork = [CLNetwork shareNetWork];
-    
-    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+    NSURLConnection *connection = [netWork.requestDic objectForKey:tag];
+    if (tag.length > 0 && connection) {
+        connection.requestBlock = result;
         return;
+    }
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
@@ -284,8 +290,11 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 {
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+    NSURLConnection *connection = [netWork.requestDic objectForKey:tag];
+    if (tag.length > 0 && connection) {
+        connection.requestBlock = result;
         return;
+    }
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
@@ -326,8 +335,11 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
 {
     CLNetwork *netWork = [CLNetwork shareNetWork];
     
-    if (tag.length > 0 && [netWork.requestDic objectForKey:tag])
+    NSURLConnection *connection = [netWork.requestDic objectForKey:tag];
+    if (tag.length > 0 && connection) {
+        connection.requestWithTagBlock = result;
         return;
+    }
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         

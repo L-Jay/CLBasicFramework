@@ -48,6 +48,8 @@
     
     NSDictionary *dic = [self.listArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [dic objectForKey:@"Name"];
+    cell.imageView.image = [UIImage imageNamed:@"applyicon"];
+    cell.imageView.activityStyle = UIActivityIndicatorViewStyleGray;
     cell.imageView.imageUrl = [dic objectForKey:@"ImgUrl"];
     
     return cell;
