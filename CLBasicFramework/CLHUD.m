@@ -64,6 +64,7 @@ static CLHUDAnimation _animation = 0;
 @property (nonatomic) BOOL onWindow;
 @property (nonatomic) BOOL isShow;
 @property (nonatomic) BOOL willHide;
+@property (nonatomic) BOOL isActivity;
 
 @property (nonatomic) UIInterfaceOrientation oldOrientation;
 
@@ -442,8 +443,14 @@ static CLHUDAnimation _animation = 0;
 + (void)showActivityViewInView:(UIView *)view canTouch:(BOOL)touch showBG:(BOOL)show withText:(NSString *)text
 {
     CLHUD *hud = [CLHUD swtichHUDForView:view];
-    if (hud.isShow)
-        return;
+    if (hud.isShow) {
+        if (hud.isActivity)
+            return;
+        else
+            [NSObject cancelPreviousPerformRequestsWithTarget:hud];
+    }
+    
+    hud.isActivity = YES;
     
     if(hud.onWindow){
         if(!hud.window.isKeyWindow)
@@ -451,7 +458,6 @@ static CLHUDAnimation _animation = 0;
         hud.window.hidden = NO;
     }
     
-    //hud.mainSuperView = view ? view : hud.window;
     [hud.mainSuperView addSubview:hud.mainView];
     
     [hud.mainView removeAllSubviews];
@@ -598,8 +604,10 @@ static CLHUDAnimation _animation = 0;
         self.oldText = text;
         self.oldImageName = imageName;
         self.willHide = NO;
-        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideAnimation:) object:[NSNumber numberWithBool:YES]];
+        [NSObject cancelPreviousPerformRequestsWithTarget:self];
     }
+    
+    self.isActivity = NO;
     
     if(self.onWindow){
         if(!self.window.isKeyWindow)
@@ -716,7 +724,7 @@ static CLHUDAnimation _animation = 0;
     else {
         if (duration != 0 && !self.willHide) {
             self.willHide = YES;
-            [self performSelector:@selector(hideAnimation:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
+            [self performSelector:@selector(performHide:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
         }
     }
 }
@@ -766,8 +774,15 @@ static CLHUDAnimation _animation = 0;
     }
 }
 
+- (void)performHide:(NSNumber *)number
+{
+    [self hideAnimation:[number boolValue]];
+}
+
 - (void)hideAnimation:(BOOL)animation
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    
     if (!animation) {
         [self finishHide];
         return;
@@ -815,7 +830,7 @@ static CLHUDAnimation _animation = 0;
             self.willHide = YES;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.mainView setNeedsDisplay];
-                [self performSelector:@selector(hideAnimation:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
+                [self performSelector:@selector(performHide:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
             });
             
         }
@@ -840,7 +855,7 @@ static CLHUDAnimation _animation = 0;
             }completion:^(BOOL finish){
                 if (duration != 0 && !self.willHide) {
                     self.willHide = YES;
-                    [self performSelector:@selector(hideAnimation:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
+                    [self performSelector:@selector(performHide:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
                 }
             }];
         }];
@@ -861,7 +876,7 @@ static CLHUDAnimation _animation = 0;
             }completion:^(BOOL finish){
                 if (duration != 0 && !self.willHide) {
                     self.willHide = YES;
-                    [self performSelector:@selector(hideAnimation:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
+                    [self performSelector:@selector(performHide:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
                 }
             }];
         }];
@@ -882,7 +897,7 @@ static CLHUDAnimation _animation = 0;
             }completion:^(BOOL finish){
                 if (duration != 0 && !self.willHide) {
                     self.willHide = YES;
-                    [self performSelector:@selector(hideAnimation:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
+                    [self performSelector:@selector(performHide:) withObject:[NSNumber numberWithBool:YES] afterDelay:duration inModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
                 }
             }];
         }];
@@ -966,13 +981,15 @@ static CLHUDAnimation _animation = 0;
         }
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
-        
-        self.mainSuperView.hud = nil;
     }
     
     self.mainView.transform = CGAffineTransformMakeScale(1, 1);
     self.mainView.alpha = 1;
     [self.mainView removeFromSuperview];
+    
+    if (!self.onWindow && self.tag == 0xCDCD) {
+        self.mainSuperView.hud = nil;
+    }
     
     self.alpha = 1;
     self.isShow = NO;

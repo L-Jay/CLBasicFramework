@@ -27,6 +27,45 @@
     NSLog(@"screen: %@", NSStringFromCGRect([UIScreen mainScreen].bounds));
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //[[CLHUD hudForView:self.view] showSucceed];
+    //[CLHUD showActivityViewInView:self.view];
+    
+    [[CLHUD hudForView:self.view] showSucceedWithText:@"第一次"];
+    //[CLHUD showSucceedWithText:@"第一次"];
+    [self performSelector:@selector(showAc) withObject:nil afterDelay:1];
+}
+
+- (void)showAc
+{
+    //[self.view.hud hideAnimation:YES];
+    
+    //[self.view.hud showFailed];
+    
+    //[CLHUD showActivityView];
+    [CLHUD showActivityViewInView:self.view];
+    [self performSelector:@selector(showOt) withObject:nil afterDelay:3];
+}
+
+- (void)showOt
+{
+    //[CLHUD showActivityViewInView:self.view];
+    //[self.view.hud hideAnimation:YES];
+    
+    //[CLHUD showSucceedWithText:@"第二次"];
+    [self.view.hud showSucceedWithText:@"第二次"];
+    [self performSelector:@selector(showTh) withObject:nil afterDelay:1];
+}
+
+- (void)showTh
+{
+    //[CLHUD showFailedWithText:@"第三次"];
+    [self.view.hud showFailedWithText:@"第三次"];
+}
+
 - (void)showHUD
 {
     //[[CLHUD hudForView:self.view] showSucceedWithText:@"试试"];
