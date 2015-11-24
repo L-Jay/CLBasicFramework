@@ -101,5 +101,28 @@
  */
 - (CGSize)sizeWithFont:(UIFont *)font boundingRect:(CGSize)size;
 
+/*
+ */
+- (NSString *)AES128EncryptWithKey:(NSString *)key;
+
+/*
+ */
+- (NSString *)AES128DecryptWithKey:(NSString *)key;
+
+/*
+ */
+- (NSData *)base64Encoded;
+
+/*
+ */
++ (NSString *)base64EncodedStringFrom:(NSData *)data;
+
+/*
+ */
+- (NSString *)sha1;
+
+/*
+ */
+- (NSString *)URLEncode;
 
 @end

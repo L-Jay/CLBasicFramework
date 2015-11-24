@@ -92,9 +92,6 @@
 
 - (void)postImage
 {
-    
-    [CLBasicFramework frameworkVersionAndAuthorInfo];
-    
 //    UIImage *img = [UIImage imageNamed:@"test.jpg"];
 //    
 //    [CLNetwork postImageRequestWithTypeUrl:@"user/change_avatar" keyAndValues:nil image:img withTag:nil requestResult:^(id object, NSError *error) {

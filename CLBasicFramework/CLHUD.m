@@ -262,7 +262,7 @@ static CLHUDAnimation _animation = 0;
 - (void)orientationRotate:(NSNotification *)notification
 {
     if (self.onWindow) {
-        CGFloat rotate;
+        CGFloat rotate = 0.0;
 		
         if (CLStatusIsPortrait)		rotate = 0.0;
         if (CLStatusIsUpsideDown)	rotate = M_PI;

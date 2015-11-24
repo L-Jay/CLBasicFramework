@@ -12,6 +12,7 @@
 #import "CLNetWork.h"
 #import "CLCache.h"
 #import "Reachability.h"
+#import "CLNSStringUtils.h"
 
 typedef void (^FinishBLock)(BOOL finish);
 
@@ -146,7 +147,7 @@ static char const * const animationChar = "animation";
     
     objc_setAssociatedObject(self, imageUrlChar, imageUrl, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
-    UIImage *image = [[UIImage alloc] initWithData:[CLCache getDataInCache:[self.imageUrl lastPathComponent] directoryName:@"ImageCache"]];
+    UIImage *image = [[UIImage alloc] initWithData:[CLCache getDataInCache:[self.imageUrl md5] directoryName:@"CLImageCache"]];
     
     if (image) {
         self.image = image;
@@ -168,7 +169,7 @@ static char const * const animationChar = "animation";
         
         __block typeof(self) bself = self;
         
-        [CLNetwork getRequestWithUrl:self.imageUrl withTag:[imageUrl lastPathComponent] requestResultWithTag:^(id object, NSError *error, NSString *tag) {
+        [CLNetwork getRequestWithUrl:self.imageUrl withTag:[self.imageUrl md5] requestResultWithTag:^(id object, NSError *error, NSString *tag) {
             [bself.activityView stopAnimating];
             
             __block UIImage *image = nil;
@@ -181,11 +182,11 @@ static char const * const animationChar = "animation";
                 
                 if (self.dontUseOriginalImage) {
                     NSData *smallData = UIImageJPEGRepresentation(image, 0.5);
-                    [CLCache writeToCache:tag directoryName:@"ImageCache" withData:smallData];
+                    [CLCache writeToCache:[bself.imageUrl md5] directoryName:@"CLImageCache" withData:smallData];
                 }else
-                    [CLCache writeToCache:tag directoryName:@"ImageCache" withData:object];
+                    [CLCache writeToCache:[bself.imageUrl md5] directoryName:@"CLImageCache" withData:object];
                 
-                if (image && !self.dontReplaceImmediately && [[bself.imageUrl lastPathComponent] isEqualToString:tag]) {
+                if (image && !self.dontReplaceImmediately && [[bself.imageUrl md5] isEqualToString:tag]) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         bself.image = image;
                         [image release];
@@ -217,7 +218,7 @@ static char const * const animationChar = "animation";
 
 - (void)downloadImageProgress:(void (^)(CGFloat))imageProgress
 {
-    [CLNetwork requestProgressWithTag:self.imageUrl progress:^(unsigned long long reciveLength, unsigned long long totalLength, float progress){
+    [CLNetwork requestProgressWithTag:[self.imageUrl md5] progress:^(unsigned long long reciveLength, unsigned long long totalLength, float progress){
         imageProgress(progress);
     }];
 }

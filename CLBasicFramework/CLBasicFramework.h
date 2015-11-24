@@ -70,11 +70,5 @@ CGFloat DeviceSystemVersion();
  */
 + (NSString *)UUID;
 
-/**
- *	@brief	framework版本与我的信息.
- */
-+ (void)frameworkVersionAndAuthorInfo;
-
-
 @end
 

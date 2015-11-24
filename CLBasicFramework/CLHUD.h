@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, CLHUDStyle) {
-    CLHUDStyleBlack                                = 0,
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
-    CLHUDStyleIOS7      NS_ENUM_AVAILABLE_IOS(7_0) = 1,
-#endif
+    CLHUDStyleBlack = 0,
+    CLHUDStyleIOS7  = 1,
 };
 
 typedef NS_ENUM(NSInteger, CLHUDAnimation) {

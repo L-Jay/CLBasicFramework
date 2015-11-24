@@ -421,14 +421,10 @@ typedef void (^ProgressCallBack)(unsigned long long reciveLength, unsigned long 
         id value = [finalValue objectForKey:key];
         
         if ([value isKindOfClass:NSData.class]) {
-            NSString *dataString = [value description];
-            NSString *newString = [NSMakeCollectable(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)dataString, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))) autorelease];
-            if (newString) {
-                [content appendString:[NSString stringWithFormat:@"%@=%@%@", key, newString, (i<finalValue.allKeys.count-1 ?  @"&" : @"")]];
-            }
+            value = [value description];
         }
-        else
-            [content appendString:[NSString stringWithFormat:@"%@=%@%@", key, value, (i<finalValue.allKeys.count-1 ?  @"&" : @"")]];
+        
+        [content appendString:[NSString stringWithFormat:@"%@=%@%@", [key URLEncode], [value URLEncode], (i<finalValue.allKeys.count-1 ?  @"&" : @"")]];
         
         i++;
     }
