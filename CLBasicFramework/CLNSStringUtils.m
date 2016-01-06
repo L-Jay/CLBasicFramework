@@ -58,13 +58,9 @@
 #pragma mark - String Size
 - (CGSize)sizeWithFont:(UIFont *)font boundingRect:(CGSize)size
 {
-    if (DEVICE_ISIOS7) {
-        NSDictionary *attributes = @{NSFontAttributeName:font};
-        NSInteger options = NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin;
-        return [self boundingRectWithSize:size options:options attributes:attributes context:NULL].size;
-    }
-    
-    return [self sizeWithFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+    NSDictionary *attributes = @{NSFontAttributeName:font};
+    NSInteger options = NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin;
+    return [self boundingRectWithSize:size options:options attributes:attributes context:NULL].size;
 }
 
 #pragma mark - AES128
@@ -137,7 +133,8 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 - (NSData *)base64Encoded
 {
     if (self == nil)
-        [NSException raise:NSInvalidArgumentException format:nil];
+        return nil;
+    
     if ([self length] == 0)
         return [NSData data];
     
