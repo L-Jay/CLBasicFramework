@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9F1BCB58-E13C-45F6-A0A0-013132DB1292</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CLBasicFramework</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B58E4C49CCDFC1A583D905CFE7CE604FAC45C927</key>
+		<string>https://git.oschina.net/CLApp/CLBasicFramework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CLBasicFramework.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B58E4C49CCDFC1A583D905CFE7CE604FAC45C927</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://git.oschina.net/CLApp/CLBasicFramework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B58E4C49CCDFC1A583D905CFE7CE604FAC45C927</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B58E4C49CCDFC1A583D905CFE7CE604FAC45C927</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CLBasicFramework</string>
+		</dict>
+	</array>
+</dict>
+</plist>
