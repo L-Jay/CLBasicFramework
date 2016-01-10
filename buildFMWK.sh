@@ -7,6 +7,8 @@ configuration=Release
 
 build_Dir=${rootPath}/buildFMWK
 
+agvtool next-version
+
 for sdk in iphonesimulator iphoneos
 do
     echo "制作framework ..."
