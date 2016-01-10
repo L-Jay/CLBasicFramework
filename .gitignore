@@ -15,6 +15,8 @@ profile
 DerivedData
 .idea/
 *.hmap
+build/
+buildFMWK/
 
 #CocoaPods
 Pods
