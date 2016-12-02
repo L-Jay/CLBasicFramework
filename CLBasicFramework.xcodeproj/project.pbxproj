@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0B06B6B7195724A100AD3B12 /* ImageNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */; };
+		0B2AE1E71C42673500244D89 /* CLBasicFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780F919552A7200CF2DCF /* CLBasicFramework.m */; };
+		0B2AE1E81C42673500244D89 /* CLNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780FC19552A9F00CF2DCF /* CLNetwork.m */; };
+		0B2AE1E91C42673500244D89 /* CLUIImageView+CLNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5780FF19552BD800CF2DCF /* CLUIImageView+CLNetwork.m */; };
+		0B2AE1EA1C42673500244D89 /* CLHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810219552C0000CF2DCF /* CLHUD.m */; };
+		0B2AE1EB1C42673500244D89 /* CLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810519552C2800CF2DCF /* CLCache.m */; };
+		0B2AE1EC1C42673500244D89 /* CLUIViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810819552D0B00CF2DCF /* CLUIViewUtils.m */; };
+		0B2AE1ED1C42673500244D89 /* CLNSStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810B19552D1E00CF2DCF /* CLNSStringUtils.m */; };
+		0B2AE1EE1C42673500244D89 /* CLExpandUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57810E19552D6200CF2DCF /* CLExpandUtils.m */; };
+		0B2AE1EF1C42673500244D89 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B57811319552D7E00CF2DCF /* Reachability.m */; };
+		0B2AE1F11C42675200244D89 /* CLBasicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5780F819552A7200CF2DCF /* CLBasicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F21C42675200244D89 /* CLNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5780FB19552A9F00CF2DCF /* CLNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F31C42675200244D89 /* CLUIImageView+CLNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5780FE19552BD800CF2DCF /* CLUIImageView+CLNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F41C42675200244D89 /* CLHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57810119552C0000CF2DCF /* CLHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F51C42675200244D89 /* CLCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57810419552C2800CF2DCF /* CLCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F61C42675200244D89 /* CLUIViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57810719552D0B00CF2DCF /* CLUIViewUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F71C42675200244D89 /* CLNSStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57810A19552D1E00CF2DCF /* CLNSStringUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F81C42675200244D89 /* CLExpandUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57810D19552D6200CF2DCF /* CLExpandUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B2AE1F91C42675200244D89 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B57811219552D7E00CF2DCF /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B2CB4A01A47FF1C001FDCCB /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CB49F1A47FF1C001FDCCB /* ListTableViewController.m */; };
 		0B5780C91955299300CF2DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780C81955299300CF2DCF /* Foundation.framework */; };
 		0B5780CD1955299300CF2DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5780CC1955299300CF2DCF /* UIKit.framework */; };
@@ -47,6 +65,8 @@
 /* Begin PBXFileReference section */
 		0B06B6B5195724A100AD3B12 /* ImageNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageNetworkViewController.h; sourceTree = "<group>"; };
 		0B06B6B6195724A100AD3B12 /* ImageNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageNetworkViewController.m; sourceTree = "<group>"; };
+		0B2AE1E01C4242AE00244D89 /* CLBasicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLBasicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B2AE1E31C4242AE00244D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2CB49E1A47FF1C001FDCCB /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		0B2CB49F1A47FF1C001FDCCB /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		0B5780C51955299300CF2DCF /* CLBasicFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLBasicFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +110,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B2AE1DD1C4242AE00244D89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B5780C21955299300CF2DCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,12 +139,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2AE1E11C4242AE00244D89 /* MakeFMWK */ = {
+			isa = PBXGroup;
+			children = (
+				0B2AE1E21C4242AE00244D89 /* Supporting Files */,
+			);
+			path = MakeFMWK;
+			sourceTree = "<group>";
+		};
+		0B2AE1E21C4242AE00244D89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B2AE1E31C4242AE00244D89 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		0B5780BC1955299300CF2DCF = {
 			isa = PBXGroup;
 			children = (
 				8CEC41D61A2316710049CA50 /* CLBasicFramework.bundle */,
 				0B5780CE1955299300CF2DCF /* CLBasicFramework */,
 				0B5780E71955299300CF2DCF /* CLBasicFrameworkTests */,
+				0B2AE1E11C4242AE00244D89 /* MakeFMWK */,
 				0B5780C71955299300CF2DCF /* Frameworks */,
 				0B5780C61955299300CF2DCF /* Products */,
 			);
@@ -128,6 +172,7 @@
 			children = (
 				0B5780C51955299300CF2DCF /* CLBasicFramework.app */,
 				0B5780E01955299300CF2DCF /* CLBasicFrameworkTests.xctest */,
+				0B2AE1E01C4242AE00244D89 /* CLBasicFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +263,44 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0B2AE1F01C42673E00244D89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B2AE1F11C42675200244D89 /* CLBasicFramework.h in Headers */,
+				0B2AE1F21C42675200244D89 /* CLNetwork.h in Headers */,
+				0B2AE1F41C42675200244D89 /* CLHUD.h in Headers */,
+				0B2AE1F31C42675200244D89 /* CLUIImageView+CLNetwork.h in Headers */,
+				0B2AE1F51C42675200244D89 /* CLCache.h in Headers */,
+				0B2AE1F61C42675200244D89 /* CLUIViewUtils.h in Headers */,
+				0B2AE1F71C42675200244D89 /* CLNSStringUtils.h in Headers */,
+				0B2AE1F81C42675200244D89 /* CLExpandUtils.h in Headers */,
+				0B2AE1F91C42675200244D89 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0B2AE1DF1C4242AE00244D89 /* MakeFMWK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B2AE1E61C4242AE00244D89 /* Build configuration list for PBXNativeTarget "MakeFMWK" */;
+			buildPhases = (
+				0B2AE1DC1C4242AE00244D89 /* Sources */,
+				0B2AE1DD1C4242AE00244D89 /* Frameworks */,
+				0B2AE1DE1C4242AE00244D89 /* Resources */,
+				0B2AE1F01C42673E00244D89 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MakeFMWK;
+			productName = MakeFMWK;
+			productReference = 0B2AE1E01C4242AE00244D89 /* CLBasicFramework.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
 		0B5780C41955299300CF2DCF /* CLBasicFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B5780F11955299300CF2DCF /* Build configuration list for PBXNativeTarget "CLBasicFramework" */;
@@ -263,6 +345,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = L;
 				TargetAttributes = {
+					0B2AE1DF1C4242AE00244D89 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					0B5780DF1955299300CF2DCF = {
 						TestTargetID = 0B5780C41955299300CF2DCF;
 					};
@@ -282,11 +367,19 @@
 			targets = (
 				0B5780C41955299300CF2DCF /* CLBasicFramework */,
 				0B5780DF1955299300CF2DCF /* CLBasicFrameworkTests */,
+				0B2AE1DF1C4242AE00244D89 /* MakeFMWK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B2AE1DE1C4242AE00244D89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B5780C31955299300CF2DCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +401,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B2AE1DC1C4242AE00244D89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B2AE1E71C42673500244D89 /* CLBasicFramework.m in Sources */,
+				0B2AE1E81C42673500244D89 /* CLNetwork.m in Sources */,
+				0B2AE1E91C42673500244D89 /* CLUIImageView+CLNetwork.m in Sources */,
+				0B2AE1EA1C42673500244D89 /* CLHUD.m in Sources */,
+				0B2AE1EB1C42673500244D89 /* CLCache.m in Sources */,
+				0B2AE1EC1C42673500244D89 /* CLUIViewUtils.m in Sources */,
+				0B2AE1ED1C42673500244D89 /* CLNSStringUtils.m in Sources */,
+				0B2AE1EE1C42673500244D89 /* CLExpandUtils.m in Sources */,
+				0B2AE1EF1C42673500244D89 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B5780C11955299300CF2DCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +477,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0B2AE1E41C4242AE00244D89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MakeFMWK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CLBasicFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		0B2AE1E51C4242AE00244D89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MakeFMWK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CLBasicFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		0B5780EF1955299300CF2DCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -521,6 +683,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B2AE1E61C4242AE00244D89 /* Build configuration list for PBXNativeTarget "MakeFMWK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B2AE1E41C4242AE00244D89 /* Debug */,
+				0B2AE1E51C4242AE00244D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0B5780C01955299300CF2DCF /* Build configuration list for PBXProject "CLBasicFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
