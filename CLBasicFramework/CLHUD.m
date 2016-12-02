@@ -1030,8 +1030,6 @@ static CLHUDAnimation _animation = 0;
 
 @end
 
-static char const * const hudChar = "hud";
-
 @implementation UIView (HUD)
 
 - (void)dealloc
@@ -1042,14 +1040,12 @@ static char const * const hudChar = "hud";
     }
 }
 
-- (void)setHud:(CLHUD *)hud
-{
-    objc_setAssociatedObject(self, hudChar, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (CLHUD *)hud {
+    return objc_getAssociatedObject(self, _cmd);
 }
 
-- (CLHUD *)hud
-{
-    return objc_getAssociatedObject(self, hudChar);
+- (void)setHud:(CLHUD *)hud {
+    objc_setAssociatedObject(self, @selector(hud), hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
