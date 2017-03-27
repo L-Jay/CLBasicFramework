@@ -23,7 +23,9 @@
 * 
 
 	```
-	[CLNetwork registerNetWorkWithResultKeyAndSuccessValue:@{@"code":@"200"} 		messageKey:@"message" error:^(NSError *error) {
+	[CLNetwork registerNetWorkWithResultKeyAndSuccessValue:@{@"code":@"200"} 		
+						    messageKey:@"message" 
+						         error:^(NSError *error) {
         switch (error.code) {
             case 301:
                 //do something
@@ -53,9 +55,9 @@
 
 	```
 	[CLNetwork postRequestWithTypeUrl:@"login"
-                         keyAndValues:@{@"username":@"name", @"password":@"123456"}
-                              withTag:@"login"
-                        requestResult:^(id object, NSError *error) {
+                             keyAndValues:@{@"username":@"name", @"password":@"123456"}
+                                  withTag:@"login"
+                            requestResult:^(id object, NSError *error) {
                             if (error) {
                                 switch (error.code) {
                                     case 201:
@@ -84,8 +86,8 @@
 * 
 	```
 	[CLNetwork getRequestWithUrl:@"http://xxx.xxx.com?key=value"
-                         withTag:@"SomeTag"
-                   requestResult:^(id object, NSError *error) {
+                             withTag:@"SomeTag"
+                       requestResult:^(id object, NSError *error) {
                        if (error) {
                            switch (error.code) {
                                case 201:
@@ -110,7 +112,7 @@
 
 	```
 	[CLNetwork cancelRequestWithTag:@"SomeTag"];
-    [CLNetwork cancelAllRequest];
+        [CLNetwork cancelAllRequest];
 	```
 	取消请求
 	
@@ -131,7 +133,7 @@
 
 * 
 ```
-[CLHUD showActivityView];
+    [CLHUD showActivityView];
     [CLHUD showActivityViewWithText:@"请求中"];
     [CLHUD showSucceed];
     [CLHUD showSucceedWithText:@"请求完成"];
@@ -144,7 +146,7 @@
 
 * 
 ```
-	[CLHUD showActivityViewInView:view];
+    [CLHUD showActivityViewInView:view];
     [CLHUD showActivityViewInView:view withText:@"请求中"];
     [view.hud showSucceed];
     [view.hud showSucceedWithText:@"请求完成"];
@@ -157,7 +159,7 @@
 
 * 
 ```
-	[CLHUD hideAnimation:YES];
+    [CLHUD hideAnimation:YES];
     [CLHUD hideComplete:^{
         // do something
     }];
@@ -173,13 +175,16 @@
 ##UIImageView(CLNetWork) Category
 
 ```
-	UIImageView *imgView = [[UIImageView alloc] initWithFrame:frame];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:frame];
     imgView.dontShowActivityView = YES; //是否显示activityView
     imgView.onlyWIFI = YES; //是否是在wifi下下载
     imgView.image = [UIImage imageNamed:@"defaultImage"];
     imgView.imageUrl = @"http://xxx.xxx.com/xxx.jpg";
 ```
 UIImageView扩展，异步下载图片，给imageUrl传入图片地址，更多属性、方法 <https://l-jay.github.io/CLBasicFramework/CLBasicFramework%20API/Categories/UIImageView+CLNetWork.html>
+
+##生成Framework
+运行buildFMWK.sh脚本，生成的Framework在文件夹buildFMWK中
 
 ##更多功能
 <https://l-jay.github.io/CLBasicFramework/CLBasicFramework%20API/index.html>
