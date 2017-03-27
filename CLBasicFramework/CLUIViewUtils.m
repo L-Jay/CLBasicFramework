@@ -226,7 +226,7 @@
 - (void)startAnimation:(CLViewAnimation)animation
 {
     CATransition *transtion = [CATransition animation];
-    transtion.delegate = self;
+//    transtion.delegate = self;
     transtion.timingFunction = UIViewAnimationCurveEaseInOut;
     
     CGFloat duration = 0.3;
