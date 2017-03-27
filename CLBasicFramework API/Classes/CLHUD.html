@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CLHUD Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CLBasicFramework </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">com.cui.CLBasicFramework</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/hideAnimation:">+ hideAnimation:</option>
+		
+		<option value="//api/name/hideComplete:">+ hideComplete:</option>
+		
+		<option value="//api/name/hudForView:">+ hudForView:</option>
+		
+		<option value="//api/name/isShow">+ isShow</option>
+		
+		<option value="//api/name/registerActivityView:">+ registerActivityView:</option>
+		
+		<option value="//api/name/registerAnimation:">+ registerAnimation:</option>
+		
+		<option value="//api/name/registerBackgroundImage:">+ registerBackgroundImage:</option>
+		
+		<option value="//api/name/registerFont:textColor:shadowColor:">+ registerFont:textColor:shadowColor:</option>
+		
+		<option value="//api/name/registerLabel:">+ registerLabel:</option>
+		
+		<option value="//api/name/registerSucceedImage:failImage:">+ registerSucceedImage:failImage:</option>
+		
+		<option value="//api/name/showActivityView">+ showActivityView</option>
+		
+		<option value="//api/name/showActivityViewInView:">+ showActivityViewInView:</option>
+		
+		<option value="//api/name/showActivityViewInView:withText:">+ showActivityViewInView:withText:</option>
+		
+		<option value="//api/name/showActivityViewNOTouch">+ showActivityViewNOTouch</option>
+		
+		<option value="//api/name/showActivityViewNOTouchInView:">+ showActivityViewNOTouchInView:</option>
+		
+		<option value="//api/name/showActivityViewNOTouchInView:withText:">+ showActivityViewNOTouchInView:withText:</option>
+		
+		<option value="//api/name/showActivityViewNOTouchWithText:">+ showActivityViewNOTouchWithText:</option>
+		
+		<option value="//api/name/showActivityViewWithBackView">+ showActivityViewWithBackView</option>
+		
+		<option value="//api/name/showActivityViewWithBackViewInView:">+ showActivityViewWithBackViewInView:</option>
+		
+		<option value="//api/name/showActivityViewWithBackViewInView:withText:">+ showActivityViewWithBackViewInView:withText:</option>
+		
+		<option value="//api/name/showActivityViewWithBackViewWithText:">+ showActivityViewWithBackViewWithText:</option>
+		
+		<option value="//api/name/showActivityViewWithText:">+ showActivityViewWithText:</option>
+		
+		<option value="//api/name/showFailed">+ showFailed</option>
+		
+		<option value="//api/name/showFailedWithText:">+ showFailedWithText:</option>
+		
+		<option value="//api/name/showImage:">+ showImage:</option>
+		
+		<option value="//api/name/showSucceed">+ showSucceed</option>
+		
+		<option value="//api/name/showSucceedWithText:">+ showSucceedWithText:</option>
+		
+		<option value="//api/name/showText:">+ showText:</option>
+		
+		<option value="//api/name/showText:withImage:imagePosition:duration:">+ showText:withImage:imagePosition:duration:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/hideAnimation:">- hideAnimation:</option>
+		
+		<option value="//api/name/hideComplete:">- hideComplete:</option>
+		
+		<option value="//api/name/showFailed">- showFailed</option>
+		
+		<option value="//api/name/showFailedWithText:">- showFailedWithText:</option>
+		
+		<option value="//api/name/showImage:">- showImage:</option>
+		
+		<option value="//api/name/showSucceed">- showSucceed</option>
+		
+		<option value="//api/name/showSucceedWithText:">- showSucceedWithText:</option>
+		
+		<option value="//api/name/showText:">- showText:</option>
+		
+		<option value="//api/name/showText:withImage:imagePosition:duration:">- showText:withImage:imagePosition:duration:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CLHUD Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>UIView</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CLHUD.h<br />CLHUD.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Register Methods" name="task_Register Methods"></a>
+						<h2 class="task-title">Register Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/registerSucceedImage:failImage:" title="registerSucceedImage:failImage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerSucceedImage:failImage:">+&nbsp;registerSucceedImage:failImage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册正确、错误状态图片名称.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerSucceedImage:(NSString *)<em>succeedName</em> failImage:(NSString *)<em>failName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>succeedName</code></th>
+						<td><p>成功状态图片名称.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failName</code></th>
+						<td><p>错误状态图片名称.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerBackgroundImage:" title="registerBackgroundImage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerBackgroundImage:">+&nbsp;registerBackgroundImage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册弹框背景图片.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerBackgroundImage:(UIImage *)<em>image</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>image</code></th>
+						<td><p>背景图,UIImage型.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerActivityView:" title="registerActivityView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerActivityView:">+&nbsp;registerActivityView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册风火轮视图.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerActivityView:(UIView *)<em>view</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>自定义风火轮视图.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLabel:" title="registerLabel:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLabel:">+&nbsp;registerLabel:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册文本视图.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerLabel:(UILabel *)<em>label</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>label</code></th>
+						<td><p>自定义文本视图.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerFont:textColor:shadowColor:" title="registerFont:textColor:shadowColor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerFont:textColor:shadowColor:">+&nbsp;registerFont:textColor:shadowColor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册字体属性.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerFont:(UIFont *)<em>font</em> textColor:(UIColor *)<em>textColor</em> shadowColor:(UIColor *)<em>shadowColor</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>font</code></th>
+						<td><p>字体.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>textColor</code></th>
+						<td><p>字体颜色.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shadowColor</code></th>
+						<td><p>字体投影.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerAnimation:" title="registerAnimation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerAnimation:">+&nbsp;registerAnimation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册弹框动画.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerAnimation:(CLHUDAnimation)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>弹框动画,动画类型详见CLHUD头文件.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hudForView:" title="hudForView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hudForView:">+&nbsp;hudForView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>初始化HUD.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (CLHUD *)hudForView:(UIView *)<em>view</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>在view上显示hud.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>返回一个hud实例.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show ActivityView On Window" name="task_Show ActivityView On Window"></a>
+						<h2 class="task-title">Show ActivityView On Window</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showActivityView" title="showActivityView"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityView">+&nbsp;showActivityView</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出风火轮.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityView</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewNOTouch" title="showActivityViewNOTouch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewNOTouch">+&nbsp;showActivityViewNOTouch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出风火轮的同时视图不能点击.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewNOTouch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewWithBackView" title="showActivityViewWithBackView"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewWithBackView">+&nbsp;showActivityViewWithBackView</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出风火轮的同时有背景.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewWithBackView</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewWithText:" title="showActivityViewWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewWithText:">+&nbsp;showActivityViewWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出带文本的风火轮.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewNOTouchWithText:" title="showActivityViewNOTouchWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewNOTouchWithText:">+&nbsp;showActivityViewNOTouchWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出带文本的风火轮的同时视图不能点击.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewNOTouchWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewWithBackViewWithText:" title="showActivityViewWithBackViewWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewWithBackViewWithText:">+&nbsp;showActivityViewWithBackViewWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>弹出带文本的风火轮的同时有背景.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewWithBackViewWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show ActivityView On View" name="task_Show ActivityView On View"></a>
+						<h2 class="task-title">Show ActivityView On View</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showActivityViewInView:" title="showActivityViewInView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewInView:">+&nbsp;showActivityViewInView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出风火轮.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewInView:(UIView *)<em>view</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewNOTouchInView:" title="showActivityViewNOTouchInView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewNOTouchInView:">+&nbsp;showActivityViewNOTouchInView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出风火轮的同时不能点击.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewNOTouchInView:(UIView *)<em>view</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewWithBackViewInView:" title="showActivityViewWithBackViewInView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewWithBackViewInView:">+&nbsp;showActivityViewWithBackViewInView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出风火轮的同时有背景.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewWithBackViewInView:(UIView *)<em>view</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewInView:withText:" title="showActivityViewInView:withText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewInView:withText:">+&nbsp;showActivityViewInView:withText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出带文本的风火轮.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewInView:(UIView *)<em>view</em> withText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewNOTouchInView:withText:" title="showActivityViewNOTouchInView:withText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewNOTouchInView:withText:">+&nbsp;showActivityViewNOTouchInView:withText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出带文本的风火轮的同时不能点击.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewNOTouchInView:(UIView *)<em>view</em> withText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showActivityViewWithBackViewInView:withText:" title="showActivityViewWithBackViewInView:withText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showActivityViewWithBackViewInView:withText:">+&nbsp;showActivityViewWithBackViewInView:withText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>在指定View弹出带文本的风火轮的同时有背景.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showActivityViewWithBackViewInView:(UIView *)<em>view</em> withText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>view</code></th>
+						<td><p>要弹出HUD的View.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果视图包含UINavigationController、UITabbarController,view请根据根视图做相应的调整.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show Succeed And Failed On Window" name="task_Show Succeed And Failed On Window"></a>
+						<h2 class="task-title">Show Succeed And Failed On Window</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showSucceed" title="showSucceed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showSucceed">+&nbsp;showSucceed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>成功状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showSucceed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showSucceedWithText:" title="showSucceedWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showSucceedWithText:">+&nbsp;showSucceedWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带文本的成功状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showSucceedWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showFailed" title="showFailed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showFailed">+&nbsp;showFailed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>失败状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showFailed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showFailedWithText:" title="showFailedWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showFailedWithText:">+&nbsp;showFailedWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带文本的失败状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showFailedWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show Text And Image On View" name="task_Show Text And Image On View"></a>
+						<h2 class="task-title">Show Text And Image On View</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showText:" title="showText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showText:">+&nbsp;showText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>文本弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showImage:" title="showImage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showImage:">+&nbsp;showImage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>图片弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showImage:(NSString *)<em>imageName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageName</code></th>
+						<td><p>图片名称.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>视图弹窗的默认大小是100x100,如果使用图片大小宽、高都小于100的话,将显示背景框；宽、高任意一边大于100的话将只显示图片.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showText:withImage:imagePosition:duration:" title="showText:withImage:imagePosition:duration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showText:withImage:imagePosition:duration:">+&nbsp;showText:withImage:imagePosition:duration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带有文本和图片弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)showText:(NSString *)<em>text</em> withImage:(NSString *)<em>imageName</em> imagePosition:(CLHUDImagePosition)<em>position</em> duration:(NSInteger)<em>duration</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageName</code></th>
+						<td><p>图片名称.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>图片位置,详见头文件枚举类型<a href="../Constants/CLHUDImagePosition.html">CLHUDImagePosition</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>显示时长.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>视图弹窗的默认大小是100x100,如果使用图片大小宽、高都小于100的话,将显示背景框；宽、高任意一边大于100的话将只显示图片.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show Succeed And Failed On View" name="task_Show Succeed And Failed On View"></a>
+						<h2 class="task-title">Show Succeed And Failed On View</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showSucceed" title="showSucceed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showSucceed">&ndash;&nbsp;showSucceed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>成功状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showSucceed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showSucceedWithText:" title="showSucceedWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showSucceedWithText:">&ndash;&nbsp;showSucceedWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带文本的成功状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showSucceedWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showFailed" title="showFailed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showFailed">&ndash;&nbsp;showFailed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>失败状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showFailed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showFailedWithText:" title="showFailedWithText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showFailedWithText:">&ndash;&nbsp;showFailedWithText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带文本的失败状态弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showFailedWithText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Show Text And Image On View" name="task_Show Text And Image On View"></a>
+						<h2 class="task-title">Show Text And Image On View</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/showText:" title="showText:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showText:">&ndash;&nbsp;showText:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>文本弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showText:(NSString *)<em>text</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showImage:" title="showImage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showImage:">&ndash;&nbsp;showImage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>图片弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showImage:(NSString *)<em>imageName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageName</code></th>
+						<td><p>图片名称.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>视图弹窗的默认大小是100x100,如果使用图片大小宽、高都小于100的话,将显示背景框；宽、高任意一边大于100的话将只显示图片.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showText:withImage:imagePosition:duration:" title="showText:withImage:imagePosition:duration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showText:withImage:imagePosition:duration:">&ndash;&nbsp;showText:withImage:imagePosition:duration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>带有文本和图片弹框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)showText:(NSString *)<em>text</em> withImage:(NSString *)<em>image</em> imagePosition:(CLHUDImagePosition)<em>position</em> duration:(NSInteger)<em>duration</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>text</code></th>
+						<td><p>文本内容.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>position</code></th>
+						<td><p>图片位置,详见头文件枚举类型<a href="../Constants/CLHUDImagePosition.html">CLHUDImagePosition</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>duration</code></th>
+						<td><p>显示时长.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageName</code></th>
+						<td><p>图片名称.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>视图弹窗的默认大小是100x100,如果使用图片大小宽、高都小于100的话,将显示背景框；宽、高任意一边大于100的话将只显示图片.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Class Methods" name="task_Class Methods"></a>
+						<h2 class="task-title">Class Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isShow" title="isShow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isShow">+&nbsp;isShow</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否正在显示.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isShow</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>返回一个BOOL值,YES为正在显示.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Hide HUD Methods" name="task_Hide HUD Methods"></a>
+						<h2 class="task-title">Hide HUD Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/hideAnimation:" title="hideAnimation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideAnimation:">+&nbsp;hideAnimation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>隐藏Window上弹出框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)hideAnimation:(BOOL)<em>animation</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideAnimation:" title="hideAnimation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideAnimation:">&ndash;&nbsp;hideAnimation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>隐藏View上弹出框.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hideAnimation:(BOOL)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>是否显示动画,YES为显示.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>如果hud弹出时是在view上,那隐藏需要调用view.hud隐藏.See &lsquo;UIView (HUD)&rsquo; @property (nonatomic, retain) CLHUD *hud.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideComplete:" title="hideComplete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideComplete:">+&nbsp;hideComplete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>hud隐藏回调.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)hideComplete:(void ( ^ ) ( void ))<em>complete</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hideComplete:" title="hideComplete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hideComplete:">&ndash;&nbsp;hideComplete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>hud隐藏回调.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hideComplete:(void ( ^ ) ( void ))<em>complete</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLHUD.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 com.cui.CLBasicFramework. All rights reserved. Updated: 2017-02-20</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

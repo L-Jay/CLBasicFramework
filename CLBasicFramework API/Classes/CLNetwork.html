@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CLNetwork Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CLBasicFramework </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">com.cui.CLBasicFramework</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/addValueInConstValue:">+ addValueInConstValue:</option>
+		
+		<option value="//api/name/cancelAllRequest">+ cancelAllRequest</option>
+		
+		<option value="//api/name/cancelRequestWithTag:">+ cancelRequestWithTag:</option>
+		
+		<option value="//api/name/currentNetworkStatus">+ currentNetworkStatus</option>
+		
+		<option value="//api/name/currentNetworkStatusName">+ currentNetworkStatusName</option>
+		
+		<option value="//api/name/getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:">+ getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:</option>
+		
+		<option value="//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:">+ getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:</option>
+		
+		<option value="//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:">+ getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:</option>
+		
+		<option value="//api/name/getRequestWithUrl:keyAndValues:withTag:requestResult:">+ getRequestWithUrl:keyAndValues:withTag:requestResult:</option>
+		
+		<option value="//api/name/getRequestWithUrl:withTag:requestResult:">+ getRequestWithUrl:withTag:requestResult:</option>
+		
+		<option value="//api/name/isNetworkAvailable">+ isNetworkAvailable</option>
+		
+		<option value="//api/name/postRequestWithTypeUrl:keyAndValues:withTag:requestResult:">+ postRequestWithTypeUrl:keyAndValues:withTag:requestResult:</option>
+		
+		<option value="//api/name/registerNetWorkWithBasicUrl:constValue:">+ registerNetWorkWithBasicUrl:constValue:</option>
+		
+		<option value="//api/name/registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:">+ registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:</option>
+		
+		<option value="//api/name/removeValueInConstValue:">+ removeValueInConstValue:</option>
+		
+		<option value="//api/name/requestProgressWithTag:progress:">+ requestProgressWithTag:progress:</option>
+		
+		<option value="//api/name/sendProgressWithTag:progress:">+ sendProgressWithTag:progress:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CLNetwork Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CLNetwork.h<br />CLNetwork.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Register NetWork" name="task_Register NetWork"></a>
+						<h2 class="task-title">Register NetWork</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/registerNetWorkWithBasicUrl:constValue:" title="registerNetWorkWithBasicUrl:constValue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerNetWorkWithBasicUrl:constValue:">+&nbsp;registerNetWorkWithBasicUrl:constValue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册CLNetWork组件URL请求头.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerNetWorkWithBasicUrl:(NSString *)<em>basicUrl</em> constValue:(NSDictionary *)<em>values</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>basicUrl</code></th>
+						<td><p>基础请求URL头.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>请求URL固定参数.NSDictionary型,key对应相应的value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般项目的接口的域名都是统一的,BasicURL一般就是域名,具体根据项目情况而定.values为一般固定的参数,比如auth、token等.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:" title="registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:">+&nbsp;registerNetWorkWithResultKeyAndSuccessValue:messageKey:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>注册CLNetWork组件,请求成功状态的key值和对应的value值,描述内容的key值,错误参数.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary *)<em>keyAndValue</em> messageKey:(NSString *)<em>key</em> error:(void ( ^ ) ( NSError *error ))<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyAndValue</code></th>
+						<td><p>请求成功下的标签key值、value值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>描述信息key值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>错误回调.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>这里的error是处理多个接口都会报同样错误的,比如链接超时,无法链接服务器,用户名密码错误等,可以统一写在这里处理,每个请求都会调自身的error回调，和这个回调。具体根据项目而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="NetWork Methods" name="task_NetWork Methods"></a>
+						<h2 class="task-title">NetWork Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addValueInConstValue:" title="addValueInConstValue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addValueInConstValue:">+&nbsp;addValueInConstValue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>固定请求参数添加参数.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)addValueInConstValue:(NSDictionary *)<em>values</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>参数列表,NSDictionary型.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>例如需要用户登录的项目,登录成功会返回一些id之类的参数,每个接口都需要传递id.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeValueInConstValue:" title="removeValueInConstValue:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeValueInConstValue:">+&nbsp;removeValueInConstValue:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>固定请求参数删除参数.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeValueInConstValue:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>参数对应的key值.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>例如需要用户登录的项目,一些接口需要id之类的参数才能请求成功,退出后需要在固定请求参数里面删除这些参数,以免出现bug.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="POST Request Methods" name="task_POST Request Methods"></a>
+						<h2 class="task-title">POST Request Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/postRequestWithTypeUrl:keyAndValues:withTag:requestResult:" title="postRequestWithTypeUrl:keyAndValues:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/postRequestWithTypeUrl:keyAndValues:withTag:requestResult:">+&nbsp;postRequestWithTypeUrl:keyAndValues:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>POST请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)postRequestWithTypeUrl:(NSString *)<em>typeUrl</em> keyAndValues:(NSDictionary *)<em>values</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>typeUrl</code></th>
+						<td><p>功能URL,与basicUrl拼接为完整的URL,可为空.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>传入参数,NSDictionary型.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="GET Request Methods" name="task_GET Request Methods"></a>
+						<h2 class="task-title">GET Request Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:" title="getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:">+&nbsp;getRequestUseBasicUrl:typeUrl:useConst:keyAndValues:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>GET请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getRequestUseBasicUrl:(BOOL)<em>useUrl</em> typeUrl:(NSString *)<em>typeUrl</em> useConst:(BOOL)<em>useValue</em> keyAndValues:(NSDictionary *)<em>values</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useUrl</code></th>
+						<td><p>是否需要用basicURL.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>typeUrl</code></th>
+						<td><p>功能URL,与basicUrl拼接为完整的URL,可为空.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useValue</code></th>
+						<td><p>是否使用固定请求参数.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>传入参数.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRequestWithUrl:withTag:requestResult:" title="getRequestWithUrl:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRequestWithUrl:withTag:requestResult:">+&nbsp;getRequestWithUrl:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>GET请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getRequestWithUrl:(NSString *)<em>url</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>是否需要用basicURL.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRequestWithUrl:keyAndValues:withTag:requestResult:" title="getRequestWithUrl:keyAndValues:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRequestWithUrl:keyAndValues:withTag:requestResult:">+&nbsp;getRequestWithUrl:keyAndValues:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>GET请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getRequestWithUrl:(NSString *)<em>url</em> keyAndValues:(NSDictionary *)<em>values</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>传入参数.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>useUrl</code></th>
+						<td><p>是否需要用basicURL.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:" title="getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:">+&nbsp;getRequestUseBasicUrlAndConstValueWithTypeUrl:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>GET请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)<em>typeUrl</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>typeUrl</code></th>
+						<td><p>功能URL,与basicUrl拼接为完整的URL,可为空.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:" title="getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:">+&nbsp;getRequestUseBasicUrlAndConstValueWithTypeUrl:keyAndValues:withTag:requestResult:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>GET请求方法.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)getRequestUseBasicUrlAndConstValueWithTypeUrl:(NSString *)<em>typeUrl</em> keyAndValues:(NSDictionary *)<em>values</em> withTag:(NSString *)<em>tag</em> requestResult:(void ( ^ ) ( id object , NSError *error ))<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>typeUrl</code></th>
+						<td><p>功能URL,与basicUrl拼接为完整的URL,可为空.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>values</code></th>
+						<td><p>传入参数.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>请求tag值.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>返回错误.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>返回数据,NSArray型或NSDictionary型.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>一般返回数据类型为json格式,这里做了内部解析处理,如果成功的话object为NSArray型或NSDictionary型,如果未成功回把返回数据抛回来自行解析;error回调,如果+ (void)registerNetWorkWithResultKeyAndSuccessValue:(NSDictionary <em>)keyAndValue messageKey:(NSString </em>)key error:(void (^)(NSError *error))error; 这里做了错误处理,本方法可不做处理.如有请求报错,2个方法都会调用,具体处理请根据当时情况而定.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Request Progress Methods" name="task_Request Progress Methods"></a>
+						<h2 class="task-title">Request Progress Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/requestProgressWithTag:progress:" title="requestProgressWithTag:progress:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestProgressWithTag:progress:">+&nbsp;requestProgressWithTag:progress:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求进度.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)requestProgressWithTag:(NSString *)<em>tag</em> progress:(void ( ^ ) ( unsigned long long reciveLength , unsigned long long totalLength , float progress ))<em>progress</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>接收进度.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reciveLength</code></th>
+						<td><p>接收的文件长度.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>totalLength</code></th>
+						<td><p>文件总长度.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sendProgressWithTag:progress:" title="sendProgressWithTag:progress:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sendProgressWithTag:progress:">+&nbsp;sendProgressWithTag:progress:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>上传进度.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)sendProgressWithTag:(NSString *)<em>tag</em> progress:(void ( ^ ) ( unsigned long long sendLength , unsigned long long totalLength , float progress ))<em>progress</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>接收进度.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reciveLength</code></th>
+						<td><p>接收的文件长度.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>totalLength</code></th>
+						<td><p>文件总长度.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelRequestWithTag:" title="cancelRequestWithTag:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelRequestWithTag:">+&nbsp;cancelRequestWithTag:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消某个请求.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)cancelRequestWithTag:(NSString *)<em>tag</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tag</code></th>
+						<td><p>取消请求的tag值.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelAllRequest" title="cancelAllRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelAllRequest">+&nbsp;cancelAllRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消所有请求.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)cancelAllRequest</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="NetWork Status Methods" name="task_NetWork Status Methods"></a>
+						<h2 class="task-title">NetWork Status Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isNetworkAvailable" title="isNetworkAvailable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isNetworkAvailable">+&nbsp;isNetworkAvailable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>当前是否有网络.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isNetworkAvailable</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>如果有网,返回YES.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/currentNetworkStatus" title="currentNetworkStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentNetworkStatus">+&nbsp;currentNetworkStatus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>当前网络状态.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NetworkStatus)currentNetworkStatus</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>返回NetworkStatus型,详见<a href="../Classes/Reachability.html">Reachability</a>.h头文件.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/currentNetworkStatusName" title="currentNetworkStatusName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentNetworkStatusName">+&nbsp;currentNetworkStatusName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>当前网络名称.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)currentNetworkStatusName</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>返回当前网络名称,如Wifi,3G.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CLNetwork.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 com.cui.CLBasicFramework. All rights reserved. Updated: 2017-02-20</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
