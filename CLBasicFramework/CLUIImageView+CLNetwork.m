@@ -210,6 +210,10 @@ static char const * const animationChar = "animation";
         UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
         activityView.hidesWhenStopped = YES;
         activityView.center = self.centerBounds;
+        activityView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin |
+                                        UIViewAutoresizingFlexibleBottomMargin |
+                                        UIViewAutoresizingFlexibleLeftMargin |
+                                        UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:activityView];
         self.activityView = activityView;
         [activityView release];
